@@ -68,3 +68,15 @@
 #basket-icon{
 	cursor: pointer;
 }
+
+.modalFooter{
+	text-align: right;
+	margin-top:20px;
+}
+
+.backContainer{
+	position: absolute;
+	top:20px;
+}
+#addToMealBtn{
+}
