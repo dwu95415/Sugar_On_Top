@@ -71,6 +71,8 @@ $(document).ready(function(){
 		basket.push(evt.target.value);
 		var newItemHtml = generate_basket_html(evt.target.value);
 		$("#basket-results").append(newItemHtml);
+		$(this).prop('disabled', true);
+		$(this).html('      Added       ');
 	});
 
 	$(document).on("click", ".remove-button", function(evt){
@@ -79,7 +81,6 @@ $(document).ready(function(){
 		if(index != -1) {
 			basket.splice(index, 1);
 		}
-		console.log("Remove");
 		// Remove from MOdal
 		$(this).parent().parent().remove();
 	});
