@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>Add Ingredients</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="search_layout.css">
+<script src="lib/jquery-3.1.1.js"></script>
+<script src="search.js"></script>
+<!-- Remove this script to disable logging -->
+<script src="logging.js"></script>
+</head>
+<body>
+<div class="col-md-2 pull-right basket-container">  <img id="basket-icon" src="icons/basket.png" height="42" width="42"></div> 
+<!-- Basket Modal -->
+<!-- The Modal -->
+<div id="basket-modal" class="basketModal">
+  <!-- Modal content -->
+  <div class="basketContent" id="basket-content">
+    <span class="close" id="basket-close">&times;</span>
+    <h1>Basket</h1>
+    <div class="row basketResults" id="basket-results">     Nothing yet</div>
+  </div>
+
+</div>
+
+<!-- Results -->
+<div class="col-md-6 col-md-offset-3 centered mainCol">
+	<div class="row">
+		<input type="text" class="searchBar" id="search" placeholder="Search for ingredients..."></input>
+		<button class="btn btn-default" type="submit" id="searchSubmit"><i class="glyphicon glyphicon-search"></i></button>
+	</div>
+	<div class="row searchResults" id="search-results">
+
+
+	</div>
+</div>
+</body>
+</html>
