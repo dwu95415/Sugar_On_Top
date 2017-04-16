@@ -57,11 +57,12 @@
 .basketResults{
 	text-align:left;
 	position:relative;
-	height:100px;
+	height:200px;
+	overflow:auto;
 }
 .basketResult{
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	border-style: solid;
 }
 
