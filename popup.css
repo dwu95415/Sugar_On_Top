@@ -1,11 +1,6 @@
 body,html{
   height: 100%;
 }
-.Purple {
-  width: 100px;
-  height: 100px;
-  background-color: purple;
-}
 .popup-background{
   background-color: black;
   opacity: 0;
@@ -48,8 +43,4 @@ label{
 
 #done{
   background-color: green;
-}
-
-button, input{
-  margin: 10px;
 }
