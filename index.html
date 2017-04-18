@@ -1,20 +1,299 @@
 <html>
-  <head>
-    <!-- Load any supplemental Javascript libraries here -->
-    <script src=
-      "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<head>
+    <title>Sugar OnTop</title>
 
-    <!-- Bootstrap -->
+    <link rel="stylesheet" href="layout.css">
+    <!-- Latest compiled and minified CSS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-      
-    <script>
-      $(document).on('click','#saved',function(){
-      });
-    </script>
-  </head>
-  <body>
-    <button type='button' id='saved'>Saved</button>
-  </body>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="external_js/jquery.datetimepicker.css"/ > -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <!-- <script src="external_js/build/jquery.datetimepicker.full.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"> -->
+
+    <!-- <script src="event.js"></script>
+    <script src="interface.js"></script>
+    <script src="event-text.js"></script>
+    <script src="create-recurring-event.js"></script>
+
+    <script src="logging.js"></script> -->
+    <meta name="viewport" content="user-scalable=0 width=device-width, initial-scale=1 maximum-scale=1.0"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+
+</head>
+
+<body>
+<div class="header" id="banner">
+Welcome to <b>Sugar On Top</b>
+</div>
+
+<div class="row top-buffer">
+  <div class="col-sm-4" id="header">
+    <button type="button" id="history" class="btn btn-lg" ><span class="glyphicon glyphicon-time">   </span> History </button>
+    <button type="button" id="save" class="btn btn-lg" >
+      <span class="glyphicon glyphicon-floppy-disk"></span> Save
+     </button>
+     <button type="button" id="add-item" class="btn btn-lg" ><span class="glyphicon glyphicon-plus"></span> Add</button>
+  </div>
+
+  <div class="wrapper container">
+    <!-- <hr style="width: 100%; color: black; height: 1px; background-color:black;" /> -->
+
+        <div class="row top-buffer">
+          <div class="col-sm-offset col-sm text-center">
+          </div>
+        </div>
+
+        <!-- <hr style="width: 100%; color: black; height: 1px; background-color:black;" /> -->
+  </div>
+
+     <div class="well">
+       <ul class="nav">
+         <!-- <li class="active"><a href="#">ITEM 1</a></li> -->
+
+         <li class="lf1"><div class='food' id='food1'>rice<div class='gram' id="gram1">10g</div></div></li>
+         <li class="lf2"><div class='food' id='food2'>black beans <div class='gram' id="gram2">5g</div></div></li>
+         <li class="lf3"><div class='food' id='food3'>chicken <div class='gram' id="gram3">5g</div></div></li>
+         <li class="lf4"><div class='food' id='food4'>tortilla <div class='gram' id="gram4">10g</div></div></li>
+         <li class="lf5"><div class='food' id='food5'>cheese <div class='gram' id="gram5">10g</div></div></li>
+         <li class="lf6"><div class='food' id='food6'>salsa <div class='gram' id="gram6">10g</div></div></li>
+        <li class="lf7"><div class='food' id='food7'>lemonade <div class='gram' id="gram7">12g</div></div></li>
+        <li class="lf8"><div class='food' id='food8'>cookie <div class='gram' id="gram8">20g</div></div></li>
+       </ul>
+     </div><!--/.well -->
+   </div><!--/span-->
+
+    <div class="footer">
+    <div class='h1' id="total">Total: 0g</div>
+    <div class="col-sm-offset col-sm text-center">
+      <button type="button" id="calculate" class="btn btn-lg" >Calculate</button>
+        </div>
+      </div>
+
+</body>
 </html>
+
+    <!-- <div class="col-sm-12">
+        <input id="event-name" class="title col-md-12" type="text" placeholder="New Event Name">
+        <input id="event-location" class="col-md-12" type="text" placeholder="Add Location">
+        <div class="line"></div>
+        <div id="time-details" class="row">
+          <label class="col-md-1" ></label>
+          <input class="event-cell col-md-4" id="event-start-date" type="text">
+          <!-- <input class="event-cell col-md-2" id="event-start-time" type="text">
+          <label class="col-md-1"  id="to-label">to</label>
+          <!-- <input class="event-cell col-md-2" id="event-end-time" type="text">
+          <input class="event-cell col-md-4" id="event-end-date" placeholder="end date" type="text">
+          <label class="col-md-1" id="error_label"></label>
+        </div>
+
+        <div class="row">
+          <label class="col-md-1" ></label>
+          <div class="col-md-6" id="time-options">
+            <label >All day:</label>
+            <input id="all-day-event-checkbox" type="checkbox">
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-md-1" ></label>
+          <div class="col-md-11" id="time-options">
+            <label >Repeat:</label>
+            <select id="recurrent-event-type-selector">
+                <option value="none" selected="selected">None</option>
+                <option value="day">Every Day</option>
+                <option value="week">Every Week</option>
+                <option value="month">Every Month</option>
+                <option value="year">Every Year</option>
+                <option disabled="disabled"></option>
+                <option value="custom">Custom...</option>
+            </select>
+            <label id="until" class="hidden"> until: </label>
+            <input id="recurrent-event-end-date" class="hidden" type="text">
+          </div>
+        </div>
+
+          <div class="row">
+            <label class="col-md-1" ></label>
+
+            <div class="col-md-11" id="time-options-second">
+            <div id="recurrent-event-details" class="hidden">
+                    Frequency:
+                    <select id="recurrent-event-time-selector">
+                        <option value="day" selected="selected">Daily</option>
+                        <option value="week">Weekly</option>
+                        <option value="month">Monthly</option>
+                        <option value="year">Yearly</option>
+                    </select>
+            </div>
+            <div id="daily-recurrent-details" class="hidden">
+                Every <input id="dayly-recurrent-freq" type="text" value="1" maxlength="3" style="width:30px;"> day(s).
+            </div>
+
+            <div id="weekly-recurrent-details" class="hidden">
+                Every <input id="weekly-recurrent-freq" type="text" value="1" maxlength="2" style="width:30px;"> week(s) on:
+
+                <div class="checkboxes">
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="weekday-sun" class="weekday-checkbox" />
+                    <label for="weekday-sun">S</label>
+                    <input type="checkbox" id="weekday-mon" class="weekday-checkbox" />
+                    <label for="weekday-mon">M</label>
+                    <input type="checkbox" id="weekday-tue" class="weekday-checkbox" />
+                    <label for="weekday-tue">T</label>
+                    <input type="checkbox" id="weekday-wed" class="weekday-checkbox" />
+                    <label for="weekday-wed">W</label>
+                    <input type="checkbox" id="weekday-thu" class="weekday-checkbox" />
+                    <label for="weekday-thu">T</label>
+                    <input type="checkbox" id="weekday-fri" class="weekday-checkbox" />
+                    <label for="weekday-fri">F</label>
+                    <input type="checkbox" id="weekday-sat" class="weekday-checkbox" />
+                    <label for="weekday-sat">S</label>
+                </div>
+                </div>
+            </div>
+
+            <div id="monthly-recurrent-details" class="hidden">
+                Every <input id="monthly-recurrent-freq" type="text" value="1" maxlength="2" style="width:30px;"> month(s) on:
+
+                <div class="checkboxes">
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="month-1" class="day-checkbox">
+                    <label for="month-1">1</label>
+                    <input type="checkbox" id="month-2" class="day-checkbox">
+                    <label for="month-2">2</label>
+                    <input type="checkbox" id="month-3" class="day-checkbox">
+                    <label for="month-3">3</label>
+                    <input type="checkbox" id="month-4" class="day-checkbox">
+                    <label for="month-4">4</label>
+                    <input type="checkbox" id="month-5" class="day-checkbox">
+                    <label for="month-5">5</label>
+                    <input type="checkbox" id="month-6" class="day-checkbox">
+                    <label for="month-6">6</label>
+                    <input type="checkbox" id="month-7" class="day-checkbox">
+                    <label for="month-7">7</label>
+                </div>
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="month-8" class="day-checkbox">
+                    <label for="month-8">8</label>
+                    <input type="checkbox" id="month-9" class="day-checkbox">
+                    <label for="month-9">9</label>
+                    <input type="checkbox" id="month-10" class="day-checkbox">
+                    <label for="month-10">10</label>
+                    <input type="checkbox" id="month-11" class="day-checkbox">
+                    <label for="month-11">11</label>
+                    <input type="checkbox" id="month-12" class="day-checkbox">
+                    <label for="month-12">12</label>
+                    <input type="checkbox" id="month-13" class="day-checkbox">
+                    <label for="month-13">13</label>
+                    <input type="checkbox" id="month-14" class="day-checkbox">
+                    <label for="month-14">14</label>
+                </div>
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="month-15" class="day-checkbox">
+                    <label for="month-15">15</label>
+                    <input type="checkbox" id="month-16" class="day-checkbox">
+                    <label for="month-16">16</label>
+                    <input type="checkbox" id="month-17" class="day-checkbox">
+                    <label for="month-17">17</label>
+                    <input type="checkbox" id="month-18" class="day-checkbox">
+                    <label for="month-18">18</label>
+                    <input type="checkbox" id="month-19" class="day-checkbox">
+                    <label for="month-19">19</label>
+                    <input type="checkbox" id="month-20" class="day-checkbox">
+                    <label for="month-20">20</label>
+                    <input type="checkbox" id="month-21" class="day-checkbox">
+                    <label for="month-21">21</label>
+                </div>
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="month-22" class="day-checkbox">
+                    <label for="month-22">22</label>
+                    <input type="checkbox" id="month-23" class="day-checkbox">
+                    <label for="month-23">23</label>
+                    <input type="checkbox" id="month-24" class="day-checkbox">
+                    <label for="month-24">24</label>
+                    <input type="checkbox" id="month-25" class="day-checkbox">
+                    <label for="month-25">25</label>
+                    <input type="checkbox" id="month-26" class="day-checkbox">
+                    <label for="month-26">26</label>
+                    <input type="checkbox" id="month-27" class="day-checkbox">
+                    <label for="month-27">27</label>
+                    <input type="checkbox" id="month-28" class="day-checkbox">
+                    <label for="month-28">28</label>
+                </div>
+                <div class="checkbox-selector">
+                    <input type="checkbox" id="month-29" class="day-checkbox">
+                    <label for="month-29">29</label>
+                    <input type="checkbox" id="month-30" class="day-checkbox">
+                    <label for="month-30">30</label>
+                    <input type="checkbox" id="month-31" class="day-checkbox">
+                    <label for="month-31">31</label>
+                </div>
+                </div>
+            </div>
+
+            <div id="yearly-recurrent-details" class="hidden">
+                Every <input id="yearly-recurrent-freq" type="text" value="1" maxlength="2" style="width:30px;"> year(s) in:
+                <div class="checkboxes">
+                <div class="month-checkbox-selector">
+                    <input type="checkbox" id="year-jan" class="month-checkbox">
+                    <label for="year-jan">Jan</label>
+                    <input type="checkbox" id="year-feb" class="month-checkbox">
+                    <label for="year-feb">Feb</label>
+                    <input type="checkbox" id="year-mar" class="month-checkbox">
+                    <label for="year-mar">Mar</label>
+                    <input type="checkbox" id="year-apr" class="month-checkbox">
+                    <label for="year-apr">Apr</label>
+                </div>
+                <div class="month-checkbox-selector">
+                    <input type="checkbox" id="year-may" class="month-checkbox">
+                    <label for="year-may">May</label>
+                    <input type="checkbox" id="year-jun" class="month-checkbox">
+                    <label for="year-jun">Jun</label>
+                    <input type="checkbox" id="year-jul" class="month-checkbox">
+                    <label for="year-jul">Jul</label>
+                    <input type="checkbox" id="year-aug" class="month-checkbox">
+                    <label for="year-aug">Aug</label>
+                </div>
+                <div class="month-checkbox-selector">
+                    <input type="checkbox" id="year-sept" class="month-checkbox">
+                    <label for="year-sept">Sept</label>
+                    <input type="checkbox" id="year-oct" class="month-checkbox">
+                    <label for="year-oct">Oct</label>
+                    <input type="checkbox" id="year-nov" class="month-checkbox">
+                    <label for="year-nov">Nov</label>
+                    <input type="checkbox" id="year-dec" class="month-checkbox">
+                    <label for="year-dec">Dec</label>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+            </div> -->
+
+    <!-- <div id="new-event-text" class="card col-lg-4"></div>
+    </div> -->
+>>>>>>> c52e34985e773eab76c346c6e4a69e7ffce6d727
