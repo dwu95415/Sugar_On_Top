@@ -6,14 +6,19 @@
   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
     <script src=
   "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="layout.css">
     <script src="Scripts/historyCanvas.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-    
+    var data;
+    var breakfast;
+    var lunch;
+    var dinner;
 
     
      $(document).ready(function () {
-            var data = { title: "Blood Sugar",
+            data = { title: "Blood Sugar",
                             xLabel: 'Day', 
                             yLabel: 'mg/DL',
                             labelFont: '19pt Arial', 
@@ -22,7 +27,7 @@
                            
             };
 
-            var breakfast =  {
+            breakfast =  {
                 dataPoints: [{ x: getDate(15), y: 300 }, 
                                          { x: getDate(14), y: 250 }, 
                                          { x: getDate(13), y: 225}, 
@@ -39,10 +44,10 @@
                                          { x: getDate(2), y: 220},
                                          { x: getDate(1), y: 220},
                                          { x: getDate(0), y: 230}]
-                                     };
+            };
 
-         var lunch = { 
-            dataPoints: [{ x: getDate(15), y: 220}, 
+            lunch = { 
+                dataPoints: [{ x: getDate(15), y: 220}, 
                                          { x: getDate(14), y: 230 }, 
                                          { x: getDate(13), y: 200}, 
                                          { x: getDate(12), y: 300 },
@@ -57,16 +62,35 @@
                                          { x: getDate(3), y: 270},
                                          { x: getDate(2), y: 300},
                                          { x: getDate(1), y: 230},
-                                         { x: getDate(0), y: 240}]
-    };
+                                            { x: getDate(0), y: 240}]
+            };
 
-            historyGraph.create('canvas', data, breakfast);
-            historyGraph.create('canvas', data, lunch);
-        });
+            dinner = { 
+                dataPoints: [{ x: getDate(15), y: 120}, 
+                                         { x: getDate(14), y: 100 }, 
+                                         { x: getDate(13), y: 10}, 
+                                         { x: getDate(12), y: 100 },
+                                         { x: getDate(11), y: 145 },
+                                         { x: getDate(10), y: 134 }, 
+                                         { x: getDate(9), y: 94 },
+                                         { x: getDate(8), y: 80 },
+                                         { x: getDate(7), y: 99 }, 
+                                         { x: getDate(6), y: 140 },
+                                         { x: getDate(5), y: 150 }, 
+                                         { x: getDate(4), y: 160},
+                                         { x: getDate(3), y: 45},
+                                         { x: getDate(2), y: 55},
+                                         { x: getDate(1), y: 100},
+                                            { x: getDate(0), y: 140}]
+            };
 
-    </script>
+            historyGraph.create('canvas', data);
+            historyGraph.traceFigure('breakfast', breakfast, data);
+            historyGraph.traceFigure('lunch', lunch,data);
+            historyGraph.traceFigure('dinner',dinner,data);
+            //historyGraph.traceFigure('Breakfast',breakfast, data);
+    });
 
-    <script>
     var getDate = function(index){
         var today = new Date();
         today.setDate(today.getDate() - index);
@@ -84,48 +108,61 @@
             today = mm+'/'+dd 
         return today;
     };
+
+
+    var update = function(index){
+        var id = "#" + index;
+        if ($(id).prop('checked')){
+            historyGraph.traceFigure('breakfast',breakfast, data);
+        }
+        else{
+            console.log(document.getElementById("breakfast").getContext("2d"));
+             document.getElementById("breakfast").getContext("2d").clearRect(0, 0, $("#breakfast").width(), $("breakfast").height());
+             console.log(document.getElementById("breakfast").getContext("2d"));
+        }
+    }
     </script>
 
-    <script>
-   /* var update = function(index){
-        var id = "#" + index;
-        if (id == "#breakfastBox"){
-            if $(id).checked(){
-                historyGraph.create('breakfastBox', breakfast);
+
+        <!-- <script>
+        var update = function(index){
+            var id = "#" + index;
+            if (id == "#breakfastBox"){
+                if ($(id).checked()){
+                    historyGraph.create('breakfastBox', breakfast);
+                }
+                else
+                    document.getElementById("breakfastBox").getContext("2d").clearRect(0, 0, $("#breakfastBox").width(), $("#breakfastBox").height());
             }
-            else
-                document.getElementById("breakfastBox").getContext("2d").clearRect(0, 0, $("#breakfastBox").width(), $("#breakfastBox").height());
-        }
-        if (id == ("#" + index)){
-             historyGraph.create('lunchBox', breakfast);
+            if (id == ("#" + index)){
+                 historyGraph.create('lunchBox', breakfast);
+                }
+                else
+                    document.getElementById("lunchBox").getContext("2d").clearRect(0, 0, $("#lunchBox").width(), $("#lunchBox").height());
             }
-            else
-                document.getElementById("lunchBox").getContext("2d").clearRect(0, 0, $("#lunchBox").width(), $("#lunchBox").height());
-        }
-        if (id == ("#" + index)){}
-             historyGraph.create('dinnerBox', breakfast);
+            if (id == ("#" + index)){}
+                 historyGraph.create('dinnerBox', breakfast);
+                }
+                else
+                    document.getElementById("dinnerBox").getContext("2d").clearRect(0, 0, $("#dinnerBox").width(), $("#dinnerBox").height());
             }
-            else
-                document.getElementById("dinnerBox").getContext("2d").clearRect(0, 0, $("#dinnerBox").width(), $("#dinnerBox").height());
         }
-    }*/
-    </script>
+    </script> -->
 </head>
 <body style="margin-left:50px;margin-top:50px;">
 <div class="container">
   <div class="row">
-    <div class="col-md-10" id="graphColumn">
+    <div class="col-md-2" id="sideColumn"></div>
+    <div class="col-md-8" id="graphColumn">
         <canvas id="canvas" width="800" height="600"></canvas>
         <canvas id="breakfast" width="800" height="600"></canvas>
         <canvas id="lunch" width="800" height="600"></canvas>
         <canvas id="dinner" width="800" height="600"></canvas>
     </div>
     <div class= "col-md-2" id="checkBoxColumn">
-    <form action="/action_page.php" method="get">
-        <input id="breakfastBox" type="checkbox" onclick="update(id);"/>Breakfast</br>
-        <input id="lunchBox" type="checkbox" onclick="update(id);"/>Lunch</br>
-        <input id="dinnerBox" type="checkbox" onclick="update(id);"/>Dinner</br>
-    </form>
+        <input id="breakfastBox" type="checkbox" background-color = "red" checked = 'true' onclick="update(id);"/>Breakfast</br>
+        <input id="lunchBox" type="checkbox" color = "blue" checked = 'true' onclick="update(id);"/>Lunch</br>
+        <input id="dinnerBox" type="checkbox" color = "green" checked = 'true' onclick="update(id);"/>Dinner</br>
     </div>
     </div>
 </div>
