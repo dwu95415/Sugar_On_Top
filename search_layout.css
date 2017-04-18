@@ -89,6 +89,13 @@
     border-bottom: dashed black;
 }
 
+.noResults{
+	text-align:center;
+	margin-right:15px;
+	margin-top:10%;
+	font-size:2em;
+}
+
 /*.header{
 	background-color: #3498db
 }*/

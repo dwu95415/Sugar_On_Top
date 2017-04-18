@@ -3,15 +3,20 @@ var basket = []
 
 var show_search_results = function(food_name){
 	$("#search-results").html(''); 
+	var hasResult = false;
 	for(i=0; i < FOOD_DATABASE.length; i++)
 	{
 		if(FOOD_DATABASE[i].toLowerCase().indexOf(food_name.toLowerCase())!==-1)
 		{
-			resultHtml = generate_result_html(FOOD_DATABASE[i]);
+			var resultHtml = generate_result_html(FOOD_DATABASE[i]);
 			$("#search-results").append(resultHtml); 
+			hasResult = true;
 		}
-		else{
-		}
+	}
+	if(!hasResult)
+	{
+		var resultHtml = generate_no_results_html(food_name);
+		$("#search-results").append(resultHtml); 
 	}
 }
 
@@ -33,6 +38,12 @@ var generate_basket_html = function(food_name){
 			"<button class='btn btn-default remove-button' type='submit' value='"+food_name+"'>Remove</button></div></div>";
 	return html;
 }
+
+var generate_no_results_html = function(food_name){
+	var html = "<div class = 'noResults'>" + food_name +" was not found </div>";
+	return html;
+}
+
 
 $(document).ready(function(){
 	$("#searchSubmit").click(function()
