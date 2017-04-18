@@ -89,10 +89,10 @@ $(function() {
 
       });
 
-/*    $('#history').click(function(){
-      //window.location = ""
-    }
-      */
+   $('#history').click(function(){
+      window.location = "history/Chart.html"
+    });
+      
 
       //  var item1= '<li class="lf1"><div class="food" id="food1">rice<div class="gram" id="gram1">10g</div></div></li>'
       //  var item2= '<li class="lf2"><div class="food" id="food2">black beans <div class='gram' id="gram2">5g</div></div></li>'

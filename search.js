@@ -52,7 +52,7 @@ $(document).ready(function(){
     });
 
 	$('#backBtn').click(function(){
-		window.location = "index.html?add=" + encodeURIComponent(1);
+		window.history.back();
 	});
 
 	$(document).on("click", "#basket-icon", function(){
