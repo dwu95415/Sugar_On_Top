@@ -22,16 +22,18 @@ $(function() {
 
     if (evt.target.id == "calculate"){
       console.log("calculate")
+      $("input.total_carbs").val(10)
     }
-    if (evt.target.id == "calculate"){
-      console.log("calculate")
-    }
-    if (evt.target.id == "calculate"){
-      console.log("calculate")
-    }
-    if (evt.target.id == "calculate"){
-      console.log("calculate")
-    }  });
+    // if (evt.target.id == "calculate"){
+    //   console.log("calculate")
+    // }
+    // if (evt.target.id == "calculate"){
+    //   console.log("calculate")
+    // }
+    // if (evt.target.id == "calculate"){
+    //   console.log("calculate")
+    // }
+  });
 
     $('#save').click(function() {
        window.location = "saved.html";
@@ -39,14 +41,14 @@ $(function() {
 
     $('#add-item').click(function(){
       var items = [
-        {name:"rice",gram:"10"},
-        {name:"black beans",gram:"5"},
-        {name:"chicken",gram:"5"},
-        {name:"tortilla",gram:"10"},
-        {name:"cheese",gram:"10"},
-        {name:"salsa",gram:"10"},
-        {name:"lemonade",gram:"12"},
-        {name:"cookie",gram:"20"}
+        {name:"rice",gram:"10",portion:"1"},
+        {name:"black beans",gram:"5",portion:"1"},
+        {name:"chicken",gram:"5",portion:"1"},
+        {name:"tortilla",gram:"10",portion:"1"},
+        {name:"cheese",gram:"10",portion:"1"},
+        {name:"salsa",gram:"10",portion:"1"},
+        {name:"lemonade",gram:"12",portion:"1"},
+        {name:"cookie",gram:"20",portion:"1"}
       ]
       for (i=0; i < items.length; i++){
         var name = items[i].name;
