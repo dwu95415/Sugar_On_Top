@@ -24,26 +24,16 @@ body,html{
 
 .button-bar{
   height: 9vh;
-}
-
-
-.title{
-  background-color: #3498db;
   width: 100%;
-  padding: .25vh;
-  height: 16vh;
+
+  display:inline-block;
 }
 
-.title h1{
-  color: white;
-  font-size: 8vh;
-  padding: 1vh;
-}
 
 .saved-list{
   position: relative;
   height: auto;
-  max-height: 63vh;
+  max-height: 80vh;
   overflow-x: hidden;
 }
 
@@ -53,8 +43,9 @@ body,html{
   background-color: #ecf0f1;
 }
 
-.food-item:enabled {
+.selected{
   background-color: #3498db;
+  color: white;
 }
 
 .food-item h3{

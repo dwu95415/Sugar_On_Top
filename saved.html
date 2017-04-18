@@ -23,30 +23,53 @@
     $(document).on('click','.food-item',function(){
       console.log('click');
       console.log($(this).css('background-color'));
-      if($(this).css('background-color') == 'rgb(236, 240, 241)' ){
+      if($(this).hasClass('selected')){
         console.log('tru');
-        $(this).css('background-color','black');
-        $(this).css('color','white');
+        $(this).removeClass('selected');
       } else {
         console.log('fal');
-        $(this).css('background-color','#ecf0f1');
-        $(this).css('color','black');
+        $(this).addClass('selected');
       }
 
     });
     </script>
   </head>
   <body>
-    <div class='button-bar'>
+    <div class='button-bar inline'>
       <button class='btn back' type='button'>
         <h4>&larr; Back</h4>
       </button>
-    </div>
-    <div class='title'>
-      <h1 class='center'>Saved Foods</h1>
+        <span class='title center'>Saved Foods</span>
     </div>
     <div class='list-view'>
       <ul class='list-group saved-list'>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
         <li class='list-group-item food-item'>
           <h3>Chicken Burrito</h3>
         </li>
