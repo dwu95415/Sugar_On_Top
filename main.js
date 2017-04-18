@@ -52,11 +52,13 @@ $(function() {
         var name = items[i].name;
         var gram = items[i].gram;
         var item =
-        '<li class="lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
-
+        '<li class=" active lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
+        total += parseInt(gram)
         $(".well ul").append(item);
 
       }
+      $('#total').text('Total: '+total + 'g')
+
       //  var item1= '<li class="lf1"><div class="food" id="food1">rice<div class="gram" id="gram1">10g</div></div></li>'
       //  var item2= '<li class="lf2"><div class="food" id="food2">black beans <div class='gram' id="gram2">5g</div></div></li>'
       //          <li class="lf3"><div class='food' id='food3'>chicken <div class='gram' id="gram3">5g</div></div></li>
