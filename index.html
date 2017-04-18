@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Sugar OnTop</title>
+
+    <link rel="stylesheet" href="layout.css">
+    <!-- Latest compiled and minified CSS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <meta name="viewport" content="user-scalable=0 width=device-width, initial-scale=1 maximum-scale=1.0"/>
+
+    <!-- popup style and js -->
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js"></script>
+
+</head>
+
+<body>
+<div class="header" id="banner">
+Welcome to <b>Sugar On Top</b>
+</div>
+
+<div class="row top-buffer">
+  <div class="col-sm-4" id="header">
+    <button type="button" id="history" class="btn btn-lg" ><span class="glyphicon glyphicon-time">   </span> History </button>
+    <button type="button" id="save" class="btn btn-lg" >
+      <span class="glyphicon glyphicon-floppy-disk"></span> Save
+     </button>
+     <button type="button" id="add-item" class="btn btn-lg" ><span class="glyphicon glyphicon-plus"></span> Add</button>
+  </div>
+
+  <div class="wrapper container">
+    <!-- <hr style="width: 100%; color: black; height: 1px; background-color:black;" /> -->
+
+        <div class="row top-buffer">
+          <div class="col-sm-offset col-sm text-center">
+          </div>
+        </div>
+
+        <!-- <hr style="width: 100%; color: black; height: 1px; background-color:black;" /> -->
+  </div>
+
+     <div class="well">
+       <ul class="nav">
+         <!-- <li class="active"><a href="#">ITEM 1</a></li> -->
+       </ul>
+     </div><!--/.well -->
+   </div><!--/span-->
+
+    <div class="footer">
+    <div class='h1' id="total">Total: 0g</div>
+    <div class="col-sm-offset col-sm text-center">
+      <button type="button" id="calculate" class="btn btn-lg" ><div class="h3">Calculate</div></button>
+        </div>
+      </div>
+
+      <!--popup for calculate carbs -->
+      <div class='popup-background invisible'>
+      </div>
+      <div class='center popup invisible'>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Total Carb Intake:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Insulin-Carb Ratio:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Blood Sugar:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <br>
+        <div class="btn-toolbar justify-content-between">
+          <div class="col-xs-3">
+             <button type='button' id='cancel' class='btn'>Cancel</button>
+          </div>
+          <div class="col-xs-3 col-xs-offset-4">
+             <button type='button' id='done' class='btn'>Done</button>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>

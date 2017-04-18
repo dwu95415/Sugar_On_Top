@@ -1,0 +1,46 @@
+body,html{
+  height: 100%;
+}
+.popup-background{
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%
+}
+
+.center{
+  top: 25%;
+  height: 50%;
+  width: 75%;
+  left:12.5%;
+  border-radius: 5px;
+}
+
+.popup{
+  opacity: 0;
+  position: absolute;
+  background-color: lightgray;
+}
+
+label{
+  font-size: 3vh;
+  /*text-align: justify;*/
+}
+
+.visible{
+  visibility: visible;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+#cancel{
+  background-color: red;
+}
+
+#done{
+  background-color: green;
+}

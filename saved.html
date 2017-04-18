@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Saved Foods</title>
+    <!-- Load any supplemental Javascript libraries here -->
+    <script src=
+      "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="saved.css">
+
+    <!-- Use mobile-aware viewport -->
+    <meta name="viewport" content=
+      "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script>
+    $(document).on('click','.back',function(){
+      window.history.back();
+    });
+    $(document).on('click','.food-item',function(){
+      console.log('click');
+      console.log($(this).css('background-color'));
+      if($(this).hasClass('selected')){
+        console.log('tru');
+        $(this).removeClass('selected');
+      } else {
+        console.log('fal');
+        $(this).addClass('selected');
+      }
+
+    });
+    </script>
+  </head>
+  <body>
+    <div class='button-bar inline'>
+      <button class='btn back' type='button'>
+        <h4>&larr; Back</h4>
+      </button>
+        <span class='title center'>Saved Foods</span>
+    </div>
+    <div class='list-view'>
+      <ul class='list-group saved-list'>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Chicken Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Beef Burrito</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pork Burrito</h3>
+        </li>
+      </ul>
+    </div>
+    <div class='addFood'>
+      <h3 class='center'>Add to dish!</h3>
+    </div>
+  </body>
+</html>
