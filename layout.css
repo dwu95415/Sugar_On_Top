@@ -17,6 +17,11 @@
   padding-right: 10px;*/
 }
 
+.addFood h3 {
+  color: white;
+  font-size: 5vh;
+  padding: .5vh;
+}
 /*.button-container{
   width:50%;
   left:50%;
@@ -24,11 +29,11 @@
 /*button .part-width{
   width:50%;
 }*/
-#add-item{
+/*#add-item{
   width: 30%;
   height: 100%;
   padding-left: 2% !important;
-}
+}*/
 
 /*#history{
   text-align:center;

@@ -32,4 +32,9 @@ $(function() {
     if (evt.target.id == "calculate"){
       console.log("calculate")
     }  });
+
+    $('#save').click(function() {
+       window.location = "saved.html";
+    });
+
 });
