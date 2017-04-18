@@ -21,6 +21,69 @@
 
     <meta name="viewport" content="user-scalable=0 width=device-width, initial-scale=1 maximum-scale=1.0"/>
 
+    <!-- popup style and js -->
+    <link rel="stylesheet" href="popup.css">
+    <script>
+      $(document).on('click','#calculate',function(){
+        console.log('click');
+        $('.popup-background').animate({
+          opacity: .8
+        }, 250,function(){
+          console.log('done');
+        });
+        $('.popup').animate({
+          opacity: 1
+        }, 250);
+
+        add();
+
+      });
+
+      $(document).on('click','#done',function(){
+        console.log('click');
+        $('.popup-background').animate({
+          opacity: .2
+        }, 250,function(){
+          console.log('done');
+        });
+        $('.popup').animate({
+          opacity: .2
+        }, 250,function(){
+          remove();
+        });
+
+      });
+
+      $(document).on('click','#cancel',function(){
+        console.log('click');
+        $('.popup-background').animate({
+          opacity: 0
+        }, 250,function(){
+          console.log('done');
+        });
+        $('.popup').animate({
+          opacity: 0
+        }, 250,function(){
+          remove();
+        });
+
+      });
+
+      var remove = function(){
+        $('.popup-background').addClass('invisible');
+        $('.popup-background').removeClass('visible');
+        $('.popup').addClass('invisible');
+        $('.popup').removeClass('visible');
+      }
+
+      var add = function(){
+        $('.popup-background').removeClass('invisible');
+        $('.popup-background').addClass('visible');
+        $('.popup').removeClass('invisible');
+        $('.popup').addClass('visible');
+      }
+    </script>
+
 </head>
 
 <body>
@@ -61,6 +124,40 @@ Welcome to <b>Sugar On Top</b>
       <button type="button" id="calculate" class="btn btn-lg" ><div class="h3">Calculate</div></button>
         </div>
       </div>
+
+      <!--popup for calculate carbs -->
+      <div class='popup-background invisible'>
+      </div>
+      <div class='center popup invisible'>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Total Carb Intake:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Insulin-Carb Ratio:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <div class='form-group row'>
+          <label class='col-xs-6 col-form-label'>Blood Sugar:</label>
+          <div class='col-xs-4'>
+            <input class='form-control' type='number' name='total-carbs' value=50>
+          </div>
+        </div>
+        <br>
+        <div class="btn-toolbar justify-content-between">
+          <div class="col-xs-3">
+             <button type='button' id='cancel' class='btn'>Cancel</button>
+          </div>
+          <div class="col-xs-3 col-xs-offset-4">
+             <button type='button' id='done' class='btn'>Done</button>
+          </div>
+        </div>
+      </div>
+
 
 </body>
 </html>
