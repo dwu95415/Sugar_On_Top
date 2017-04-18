@@ -47,6 +47,14 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#addToMealBtn').click(function() {
+       window.location = "index.html?add=" + encodeURIComponent(1);
+    });
+
+	$('#backBtn').click(function(){
+		window.location = "index.html?add=" + encodeURIComponent(1);
+	});
+
 	$(document).on("click", "#basket-icon", function(){
 		$("#basket-modal").css("display", "block");
 	});

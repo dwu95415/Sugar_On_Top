@@ -3,7 +3,7 @@
 <head>
 <title>Add Ingredients</title>
 <meta name="viewport" content="width=device-width,user-scalable=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="search_layout.css">
 <script src="lib/jquery-3.1.1.js"></script>
 <script src="search.js"></script>
@@ -11,15 +11,17 @@
 <script src="logging.js"></script>
 </head>
 <body>
-<div class = "col-md-2 backContainer"> <button class="btn btn-default" type="submit" id="backBtn">Back</button></div>
-<div class="col-md-2 pull-right basket-container">  <img id="basket-icon" src="icons/basket.png" height="42" width="42"></div> 
+	<div class = "col-md-2 backContainer"> <button class="btn btn-default" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
+	<div class="col-md-2 pull-right basket-container">  <img id="basket-icon" src="icons/basket.png" height="42" width="42"></div> 
 <!-- Basket Modal -->
 <!-- The Modal -->
 <div id="basket-modal" class="basketModal">
   <!-- Modal content -->
   <div class="basketContent" id="basket-content">
-    <span class="close" id="basket-close">&times;</span>
-    <h1>Basket</h1>
+  	<div class="modalHeader">
+    	<span class="close" id="basket-close">&times;</span>
+    	<h1>Basket</h1>
+    </div>
     <div class="row basketResults" id="basket-results"></div>
     <div class="row modalFooter">
     	<div class="col-md-4 pull-right modalFooter">
