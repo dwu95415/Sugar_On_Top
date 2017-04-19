@@ -21,14 +21,14 @@ $(function() {
 
   var add = function(){
     var items = [
-        {name:"rice",gram:"10"},
-        {name:"black beans",gram:"5"},
-        {name:"chicken",gram:"5"},
-        {name:"tortilla",gram:"10"},
-        {name:"cheese",gram:"10"},
-        {name:"salsa",gram:"10"},
-        {name:"lemonade",gram:"12"},
-        {name:"cookie",gram:"20"}
+        {name:"rice",gram:"10",portion:"1"},
+        {name:"black beans",gram:"5",portion:"1"},
+        {name:"chicken",gram:"5",portion:"1"},
+        {name:"tortilla",gram:"10",portion:"1"},
+        {name:"cheese",gram:"10",portion:"1"},
+        {name:"salsa",gram:"10",portion:"1"},
+        {name:"lemonade",gram:"12",portion:"1"},
+        {name:"cookie",gram:"20",portion:"1"}
       ]
       for (i=0; i < items.length; i++){
         var name = items[i].name;
@@ -38,7 +38,6 @@ $(function() {
         total += parseInt(gram)
         $(".well ul").append(item);
       }
-      $('#total').text('Total: '+total + 'g');
   }
 
   var url_var_add = parseInt($.getUrlVar('add'));
@@ -75,28 +74,9 @@ $(function() {
     });
 
     $('#add-item').click(function(){
-// <<<<<<< HEAD
-      var items = [
-        {name:"rice",gram:"10",portion:"1"},
-        {name:"black beans",gram:"5",portion:"1"},
-        {name:"chicken",gram:"5",portion:"1"},
-        {name:"tortilla",gram:"10",portion:"1"},
-        {name:"cheese",gram:"10",portion:"1"},
-        {name:"salsa",gram:"10",portion:"1"},
-        {name:"lemonade",gram:"12",portion:"1"},
-        {name:"cookie",gram:"20",portion:"1"}
-      ]
-      for (i=0; i < items.length; i++){
-        var name = items[i].name;
-        var gram = items[i].gram;
-        var item =
-        '<li class=" active lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
-        total += parseInt(gram)
-        $(".well ul").append(item);
-      }
-// =======
-//       window.location = "search.html";
-// >>>>>>> 64b01e44f8742baa772392fd2c861d305d76aa68
+
+      window.location = "search.html";
+
       });
 
    $('#history').click(function(){
