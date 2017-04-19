@@ -1,13 +1,13 @@
 // var FOOD_DATABASE = ["Chicken", "Beans", "Rice", "Whole Wheat Tortilla", "White Tortilla", "Pork", "Beef"]
 var FOOD_DATABASE= [
-		{name:"rice",gram:"10",portion:"1"},
-		{name:"black beans",gram:"5",portion:"1"},
-		{name:"chicken",gram:"5",portion:"1"},
-		{name:"tortilla",gram:"10",portion:"1"},
-		{name:"cheese",gram:"10",portion:"1"},
-		{name:"salsa",gram:"10",portion:"1"},
-		{name:"lemonade",gram:"12",portion:"1"},
-		{name:"cookie",gram:"20",portion:"1"}
+		{index:0, name:"rice",gram:"10",portion:"1"},
+		{index:1, name:"black beans",gram:"5",portion:"1"},
+		{index:2, name:"chicken",gram:"5",portion:"1"},
+		{index:3, name:"tortilla",gram:"10",portion:"1"},
+		{index:4, name:"cheese",gram:"10",portion:"1"},
+		{index:5, name:"salsa",gram:"10",portion:"1"},
+		{index:6, name:"lemonade",gram:"12",portion:"1"},
+		{index:7, name:"cookie",gram:"20",portion:"1"}
 	]
 
 var basket = []
@@ -38,21 +38,24 @@ var generate_result_html= function(food){
 	// 		//"<div class='resultOptions col-md-2 col-md-push-3'>" +
 	// 		"<button class='btn btn-lg add-button' type='submit' value='"+food_name+"'>Add to Basket</button> </div>";
 	html =
-	'<li class="searchResult lf'+the_id+'"><div class="resultName" id="food'+the_id+'">'+food.name+'<div class="gram" id="gram'+the_id+'">'+ food.gram+'g</div></div></li>'
+	'<li class="searchResult lf'+food.index+'"><div class="resultName" id="food'+food.index+'">'+food.name+'<div class="gram" id="gram'+food.index+'">'+ food.gram+'g</div></div></li>'
 
 		// "<div class='searchResult'>" +
 		// 	"<div class='resultName col-md-6' id=food"+the_id+">" + food_name +"</div></div>";
-		the_id += 1
 
 	return html;
 }
 
-var generate_basket_html = function(food_name){
+var generate_basket_html = function(food){
 	html =
-		"<div class='basketResult'>" +
-			"<div class='resultName col-md-6'>" + food_name +"</div>" +
-			"<div class='resultOptions col-md-2 col-md-push-3'>" +
-			"<button class='btn btn-default remove-button' type='submit' value='"+food_name+"'>Remove</button></div></div>";
+	'<li class="searchResult lf'+the_id+'">  <div class="resultName" id="food'+the_id+'">'+food+'<div class="gram" id="gram'+the_id+'"></div> <span class="item-close">&times;</span> </div>	</li>'
+	the_id += 1
+
+	// html =
+	// 	"<div class='basketResult'>" +
+	// 		"<div class='resultName col-md-6'>" + food_name +"</div>" +
+	// 		"<div class='resultOptions col-md-2 col-md-push-3'>" +
+	// 		"<button class='btn btn-default remove-button' type='submit' value='"+food_name+"'>Remove</button></div></div>";
 	return html;
 }
 
@@ -132,10 +135,12 @@ $(document).ready(function(){
 			$('li.lf'+num).removeClass('active')
 		} else {
 			$('li.lf'+num).addClass('active')
-			var value = $("#"+evt.target.id).text()
+			console.log(num);
+			var value = FOOD_DATABASE[num].name + " " + FOOD_DATABASE[num].gram + "g"
 			basket.push(value);
 			var newItemHtml = generate_basket_html(value);
 			$("#basket-results").append(newItemHtml);
+
 
 		}
 	}
