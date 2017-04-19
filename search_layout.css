@@ -26,7 +26,8 @@
 	text-align:left;
 	position:relative;
 	height:100%;
-	padding-left: 40px;
+	padding-left: 35px;
+	padding-right:35px;
 }
 .searchResult{
 	width: 100%;
@@ -43,7 +44,7 @@
 
 .gram{
   float:right;
-  padding-right: 35px;
+  padding-right: 5px;
 }
 
 .active{
@@ -156,6 +157,15 @@ color: #000;
 text-shadow: 0 1px 0 #fff;
 opacity: .2;
 }
+.nav{
+    max-height: 400px;
+    overflow-y:scroll;
+    margin-bottom:10px;
+}
+#search-results{
+	/*padding-right:10px*/
+}
+
 /*.header{
 	background-color: #3498db
 }*/
