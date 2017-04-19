@@ -66,6 +66,10 @@ $(document).ready(function(){
 		window.history.back();
 	});
 
+	$('#nextBtn').click(function(){
+		$("#basket-modal").css("display", "block");
+	});
+
 	$(document).on("click", "#basket-icon", function(){
 		$("#basket-modal").css("display", "block");
 	});
@@ -100,7 +104,7 @@ $(document).ready(function(){
 		if(index != -1) {
 			basket.splice(index, 1);
 		}
-		// Remove from MOdal
+		// Remove from Modal
 		$(this).parent().parent().remove();
 	});
 

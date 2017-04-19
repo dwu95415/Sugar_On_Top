@@ -96,6 +96,22 @@
 	font-size:2em;
 }
 
+html,body{
+	height:80%;
+	width:100%;
+}
+
+.footer{
+  	clear: both;
+    position: relative;
+    height: 3em;
+    margin-top: -3em;
+}
+
+#nextBtn{
+	position:absolute;
+	right: 10%;
+}
 /*.header{
 	background-color: #3498db
 }*/
