@@ -67,13 +67,13 @@ $(function() {
         $('#total').text('Total: '+total + 'g')
       }
     }
-    document.getElementById("total_carbs").value = total
+    total = $("#total_carbs").val();
 
   });
 
-    $('#save').click(function() {
-       window.location = "saved.html";
-    });
+    // $('#save').click(function() {
+    //    window.location = "saved.html";
+    // });
 
     $('#add-item').click(function(){
 

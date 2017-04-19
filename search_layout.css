@@ -12,6 +12,17 @@
 	height:100%;
 }
 
+#search {
+	background-color: #ecf0f1;
+	height: 5vh;
+}
+
+#searchSubmit {
+	height: 5vh;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .resultOptions{
 	top:30%;
 	right:10%;
@@ -88,6 +99,8 @@
 
 #basket-icon{
 	cursor: pointer;
+	height: 10vh;
+	width: 10vh;
 }
 
 .modalFooter{
@@ -97,7 +110,7 @@
 
 .backContainer{
 	position: absolute;
-	top:20px;
+	height: 10vh;
 }
 
 .modalHeader{
@@ -147,3 +160,21 @@ html,body{
 /*.header{
 	background-color: #3498db
 }*/
+
+
+.header-button{
+  height:10vh;
+  width: 30vw;
+
+  letter-spacing: .2vw;
+  background-color: #ecf0f1;
+}
+
+.header-button:active{
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.header-button:focus{
+  outline: none;
+}

@@ -15,24 +15,8 @@
     <!-- Use mobile-aware viewport -->
     <meta name="viewport" content=
       "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="saved.js"></script>
 
-    <script>
-    $(document).on('click','.back',function(){
-      window.history.back();
-    });
-    $(document).on('click','.food-item',function(){
-      console.log('click');
-      console.log($(this).css('background-color'));
-      if($(this).hasClass('selected')){
-        console.log('tru');
-        $(this).removeClass('selected');
-      } else {
-        console.log('fal');
-        $(this).addClass('selected');
-      }
-
-    });
-    </script>
   </head>
   <body>
     <div class='button-bar inline'>

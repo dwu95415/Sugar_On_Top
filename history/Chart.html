@@ -152,27 +152,29 @@
         }
     </script> -->
 </head>
-<body style="margin-left:50px;margin-top:50px;">
-<div class="container">
+<body>
+<div clas='container'>
   <div class="row">
-    <div class = "col-md-2 backContainer"> <button class="btn btn-lg" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
+    <div class = "col-md-2 backContainer"> <button class="header-button btn btn-lg" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
   </div>
-  <div class="row">
-    <div class="col-md-2" id="sideColumn"></div>
-    <div class="col-md-8" id="graphColumn">
-        <canvas id="canvas" width="800" height="600"></canvas>
-        <canvas id="breakfast" width="800" height="600"></canvas>
-        <canvas id="lunch" width="800" height="600"></canvas>
-        <canvas id="dinner" width="800" height="600"></canvas>
-    </div>
+  <div class='content'>
     <div class="row">
-    <div class= "col-md-2" id="checkBoxColumn">
-        <input id="breakfastBox" type="checkbox" background-color = "red" checked = 'true' onclick="update(id);"/>Breakfast</br>
-        <input id="lunchBox" type="checkbox" color = "blue" checked = 'true' onclick="update(id);"/>Lunch</br>
-        <input id="dinnerBox" type="checkbox" color = "green" checked = 'true' onclick="update(id);"/>Dinner</br>
+      <div class="col-md-2" id="sideColumn"></div>
+      <div class="col-md-8" id="graphColumn">
+          <canvas id="canvas" width="800" height="600"></canvas>
+          <canvas id="breakfast" width="800" height="600"></canvas>
+          <canvas id="lunch" width="800" height="600"></canvas>
+          <canvas id="dinner" width="800" height="600"></canvas>
+      </div>
+      <div class="row">
+      <div class= "col-md-2" id="checkBoxColumn">
+          <input id="breakfastBox" type="checkbox" background-color = "red" checked = 'true' onclick="update(id);"/>Breakfast</br>
+          <input id="lunchBox" type="checkbox" color = "blue" checked = 'true' onclick="update(id);"/>Lunch</br>
+          <input id="dinnerBox" type="checkbox" color = "green" checked = 'true' onclick="update(id);"/>Dinner</br>
+      </div>
     </div>
+      </div>
   </div>
-    </div>
 </div>
 </body>
 </html>

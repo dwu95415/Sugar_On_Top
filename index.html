@@ -62,14 +62,15 @@ Welcome to <b>Sugar On Top</b>
         </div>
       </div>
 
-      <!--popup for calculate carbs -->
+      <!--popup background-->
       <div class='popup-background invisible'>
       </div>
-      <div class='center popup invisible'>
+      <!--popup for carbs-->
+      <div class='center-div popup carb-popup invisible'>
         <div class='form-group row'>
           <label class='col-xs-6 col-form-label'>Total Carb Intake:</label>
           <div class='col-xs-4'>
-            <input class='form-control' id='total_carbs' type='number' name='total_carbs'>
+            <input class='form-control' id='total_carbs' type='number' name='total_carbs' value='82'>
           </div>
 
         </div>
@@ -89,6 +90,24 @@ Welcome to <b>Sugar On Top</b>
              <button type='button' id='done' class='btn'>Done</button>
         </div>
       </div>
+
+      <!--popup for saving food-->
+      <div class='center-div popup save-popup invisible'>
+        <div class='form-group row'>
+          <br>
+          <br>
+          <br>
+          <label class='col-xs-6 col-form-label'>Food Name: </label>
+          <div class='col-xs-6'>
+            <input class='form-control' id='food-name' type='text' name='food-name'>
+          </div>
+        </div>
+        <div class="row input-row">
+             <button type='button' id='cancel' class='btn'>Cancel</button>
+             <button type='button' id='done-save' class='btn'>Save</button>
+        </div>
+      </div>
+
 
 
 </body>
