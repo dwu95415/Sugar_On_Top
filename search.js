@@ -60,7 +60,7 @@ var generate_basket_html = function(food){
 }
 
 var generate_no_results_html = function(food_name){
-	var html = "<div class = 'noResults'>" + food_name +" was not found </div>";
+	var html = "<p class = 'noResults'>" + food_name +" was not found </p>";
 	return html;
 }
 

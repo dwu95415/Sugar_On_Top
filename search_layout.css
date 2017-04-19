@@ -108,9 +108,10 @@
 
 .noResults{
 	text-align:center;
-	margin-right:15px;
+	margin-right:30px;
 	margin-top:10%;
 	font-size:2em;
+	word-wrap: break-word;
 }
 
 html,body{

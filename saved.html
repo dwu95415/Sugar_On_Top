@@ -17,6 +17,7 @@
       "width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script>
+    var selected = 0;
     $(document).on('click','.back',function(){
       window.history.back();
     });
@@ -24,12 +25,16 @@
       console.log($(this).css('background-color'));
       if($(this).hasClass('selected')){
         $(this).removeClass('selected');
+        selected -= 1
       } else {
         $(this).addClass('selected');
+        selected +=1
       }
     });
     $(document).on('click','.addFood',function(){
-      window.location = "index.html?add=" + encodeURIComponent(1);
+      if (selected > 0){
+        window.location = "index.html?add=" + encodeURIComponent(1);
+      } 
     });
 
     </script>
