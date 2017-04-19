@@ -45,6 +45,7 @@
    } */
 #header{
   text-align:center;
+  height: 10vh;
 }
 #calculate {
   position:absolute;
@@ -78,7 +79,7 @@ button .full-width{
   width:100%;
   display:block; //only if you're having issues
 }
-.top-buffer { margin-top:20px; }
+/*.top-buffer { margin-top:20px; }*/
 
 #total{
   size:18pt;
@@ -127,4 +128,21 @@ button .full-width{
   color: white;
   font-size: 5vh;
   padding: .5vh;
+}
+
+.header-button{
+  height:10vh;
+  width: 30vw;
+
+  letter-spacing: .2vw;
+  background-color: #ecf0f1;
+}
+
+.header-button:active{
+  background-color: #7f8c8d;
+  color: purple;
+}
+
+.header-button:focus{
+  outline: none;
 }
