@@ -21,18 +21,15 @@
       window.history.back();
     });
     $(document).on('click','.food-item',function(){
-      console.log('click');
       console.log($(this).css('background-color'));
       if($(this).hasClass('selected')){
-        console.log('tru');
         $(this).removeClass('selected');
       } else {
-        console.log('fal');
         $(this).addClass('selected');
       }
     });
     $(document).on('click','.addFood',function(){
-      window.history.back();
+      window.location = "index.html?add=" + encodeURIComponent(1);
     });
 
     </script>
@@ -56,32 +53,32 @@
           <h3>Pork Burrito</h3>
         </li>
         <li class='list-group-item food-item'>
-          <h3>Chicken Burrito</h3>
+          <h3>Spaghetti</h3>
         </li>
         <li class='list-group-item food-item'>
+          <h3>Cheese Steak</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pepperoni Pizza</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Orange Chicken</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Cheese Burger</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Pulled Pork</h3>
+        </li>
+        <li class='list-group-item food-item'>
+          <h3>Lasagna</h3>
+        </li>
+        <!-- <li class='list-group-item food-item'>
           <h3>Beef Burrito</h3>
         </li>
         <li class='list-group-item food-item'>
           <h3>Pork Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Chicken Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Beef Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Pork Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Chicken Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Beef Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Pork Burrito</h3>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class='addFood'>
