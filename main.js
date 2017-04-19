@@ -66,20 +66,8 @@ $(function() {
         $('#total').text('Total: '+total + 'g')
       }
     }
+    document.getElementById("total_carbs").value = total
 
-    if (evt.target.id == "calculate"){
-      console.log("calculate")
-      $("input.total_carbs").val(10)
-    }
-    // if (evt.target.id == "calculate"){
-    //   console.log("calculate")
-    // }
-    // if (evt.target.id == "calculate"){
-    //   console.log("calculate")
-    // }
-    // if (evt.target.id == "calculate"){
-    //   console.log("calculate")
-    // }
   });
 
     $('#save').click(function() {
@@ -87,7 +75,7 @@ $(function() {
     });
 
     $('#add-item').click(function(){
-<<<<<<< HEAD
+// <<<<<<< HEAD
       var items = [
         {name:"rice",gram:"10",portion:"1"},
         {name:"black beans",gram:"5",portion:"1"},
@@ -105,16 +93,16 @@ $(function() {
         '<li class=" active lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
         total += parseInt(gram)
         $(".well ul").append(item);
-=======
-      window.location = "search.html";
->>>>>>> 64b01e44f8742baa772392fd2c861d305d76aa68
-
+      }
+// =======
+//       window.location = "search.html";
+// >>>>>>> 64b01e44f8742baa772392fd2c861d305d76aa68
       });
 
    $('#history').click(function(){
       window.location = "history/Chart.html"
     });
-      
+
 
       //  var item1= '<li class="lf1"><div class="food" id="food1">rice<div class="gram" id="gram1">10g</div></div></li>'
       //  var item2= '<li class="lf2"><div class="food" id="food2">black beans <div class='gram' id="gram2">5g</div></div></li>'
