@@ -50,6 +50,9 @@ $(function() {
 
   $(document).on('click', function(evt)
   {
+    if (evt.target.id =='food-name')
+      return;
+
     if (evt.target.id.startsWith('food')||(evt.target.id.startsWith('gram'))){
       num = evt.target.id.substring(4)
       if ($('li.lf'+num).hasClass('active')){
@@ -84,17 +87,5 @@ $(function() {
    $('#history').click(function(){
       window.location = "history/Chart.html"
     });
-
-
-      //  var item1= '<li class="lf1"><div class="food" id="food1">rice<div class="gram" id="gram1">10g</div></div></li>'
-      //  var item2= '<li class="lf2"><div class="food" id="food2">black beans <div class='gram' id="gram2">5g</div></div></li>'
-      //          <li class="lf3"><div class='food' id='food3'>chicken <div class='gram' id="gram3">5g</div></div></li>
-      //          <li class="lf4"><div class='food' id='food4'>tortilla <div class='gram' id="gram4">10g</div></div></li>
-      //          <li class="lf5"><div class='food' id='food5'>cheese <div class='gram' id="gram5">10g</div></div></li>
-      //          <li class="lf6"><div class='food' id='food6'>salsa <div class='gram' id="gram6">10g</div></div></li>
-      //         <li class="lf7"><div class='food' id='food7'>lemonade <div class='gram' id="gram7">12g</div></div></li>
-      //         <li class="lf8"><div class='food' id='food8'>cookie <div class='gram' id="gram8">20g</div></div></li>'
-
-
 
 });
