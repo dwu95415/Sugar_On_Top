@@ -47,6 +47,7 @@
     height: 56px;
     padding-left: 2% !important;
     background: #2ecc71;
+    margin:0;
 }
 .footer {
   position: fixed;
