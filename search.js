@@ -1,4 +1,15 @@
-var FOOD_DATABASE = ["Chicken", "Beans", "Rice", "Whole Wheat Tortilla", "White Tortilla", "Pork", "Beef"]
+// var FOOD_DATABASE = ["Chicken", "Beans", "Rice", "Whole Wheat Tortilla", "White Tortilla", "Pork", "Beef"]
+var FOOD_DATABASE= [
+		{name:"rice",gram:"10",portion:"1"},
+		{name:"black beans",gram:"5",portion:"1"},
+		{name:"chicken",gram:"5",portion:"1"},
+		{name:"tortilla",gram:"10",portion:"1"},
+		{name:"cheese",gram:"10",portion:"1"},
+		{name:"salsa",gram:"10",portion:"1"},
+		{name:"lemonade",gram:"12",portion:"1"},
+		{name:"cookie",gram:"20",portion:"1"}
+	]
+
 var basket = []
 the_id = 0;
 var show_search_results = function(food_name){
@@ -6,7 +17,7 @@ var show_search_results = function(food_name){
 	var hasResult = false;
 	for(i=0; i < FOOD_DATABASE.length; i++)
 	{
-		if(FOOD_DATABASE[i].toLowerCase().indexOf(food_name.toLowerCase())!==-1)
+		if(FOOD_DATABASE[i].name.toLowerCase().indexOf(food_name.toLowerCase())!==-1)
 		{
 			var resultHtml = generate_result_html(FOOD_DATABASE[i]);
 			$("#search-results").append(resultHtml);
@@ -20,14 +31,14 @@ var show_search_results = function(food_name){
 	}
 }
 
-var generate_result_html= function(food_name){
+var generate_result_html= function(food){
 	// html =
 	// 	"<div class='searchResult'>" +
 	// 		"<div class='resultName col-md-6'>" + food_name +"</div>" +
 	// 		//"<div class='resultOptions col-md-2 col-md-push-3'>" +
 	// 		"<button class='btn btn-lg add-button' type='submit' value='"+food_name+"'>Add to Basket</button> </div>";
 	html =
-	'<li class="searchResult lf'+the_id+'"><div class="resultName" id="food'+the_id+'">'+food_name+'<div class="gram" id="gram'+the_id+'">g</div></div></li>'
+	'<li class="searchResult lf'+the_id+'"><div class="resultName" id="food'+the_id+'">'+food.name+'<div class="gram" id="gram'+the_id+'">'+ food.gram+'g</div></div></li>'
 
 		// "<div class='searchResult'>" +
 		// 	"<div class='resultName col-md-6' id=food"+the_id+">" + food_name +"</div></div>";
