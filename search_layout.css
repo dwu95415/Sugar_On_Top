@@ -186,10 +186,12 @@ opacity: .2;
 
 .header-button{
   height:10vh;
-  width: 30vw;
+  width: auto;
+	min-width: 30vw;
 
   letter-spacing: .2vw;
   background-color: #ecf0f1;
+	text-align: center;
 }
 
 .header-button:active{

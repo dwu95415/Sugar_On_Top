@@ -148,3 +148,9 @@ $(document).ready(function(){
 
 
 });
+
+$(function(){
+	$('#savedBtn').click(function() {
+	   window.location = "saved.html";
+	});
+});
