@@ -47,9 +47,11 @@ var generate_result_html= function(food){
 }
 
 var generate_basket_html = function(food){
+	// var value = food.name + " " +food.gram + "g"
+
+
 	html =
-	'<li class="searchResult lf'+the_id+'">  <div class="resultName" id="food'+the_id+'">'+food+'<div class="gram" id="gram'+the_id+'"></div> <span class="item-close">&times;</span> </div>	</li>'
-	the_id += 1
+	'<li class="searchResult" id="lf'+food.index+'">  <div class="resultName" id="food'+food.index+'">'+food.name+'<div class="gram" id="gram'+food.index+'"> '+food.gram+' g</div>  </div>	</li>'
 
 	// html =
 	// 	"<div class='basketResult'>" +
@@ -106,17 +108,17 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).on("click", ".add-button", function(evt){
-		if(basket.length ==0)
-		{
-			$("#basket-results").html('');
-		}
-		basket.push(evt.target.value);
-		var newItemHtml = generate_basket_html(evt.target.value);
-		$("#basket-results").append(newItemHtml);
-		$(this).prop('disabled', true);
-		$(this).html('      Added       ');
-	});
+	// $(document).on("click", ".add-button", function(evt){
+	// 	if(basket.length ==0)
+	// 	{
+	// 		$("#basket-results").html('');
+	// 	}
+	// 	basket.push(evt.target.value);
+	// 	var newItemHtml = generate_basket_html(evt.target.value);
+	// 	$("#basket-results").append(newItemHtml);
+	// 	$(this).prop('disabled', true);
+	// 	$(this).html('      Added       ');
+	// });
 
 	$(document).on("click", ".remove-button", function(evt){
 		// Remove from basket array
@@ -132,13 +134,21 @@ $(document).ready(function(){
 	if (evt.target.id.startsWith('food')||(evt.target.id.startsWith('gram'))){
 		num = evt.target.id.substring(4)
 		if ($('li.lf'+num).hasClass('active')){
-			$('li.lf'+num).removeClass('active')
+			$('li.lf'+num).removeClass('active');
+			var value = FOOD_DATABASE[num].name + " " + FOOD_DATABASE[num].gram + "g"
+			var index = basket.indexOf(value);
+			if(index != -1) {
+				basket.splice(index, 1);
+			}
+			console.log(value,basket,index,num)
+			// Remove from Modal
+			$('#lf'+num).remove();
+
 		} else {
 			$('li.lf'+num).addClass('active')
-			console.log(num);
 			var value = FOOD_DATABASE[num].name + " " + FOOD_DATABASE[num].gram + "g"
 			basket.push(value);
-			var newItemHtml = generate_basket_html(value);
+			var newItemHtml = generate_basket_html(FOOD_DATABASE[num]);
 			$("#basket-results").append(newItemHtml);
 
 

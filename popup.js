@@ -103,7 +103,7 @@ $(document).on('click','#done-save',function(){
     remove();
     $('.popup').css('z-index',-1);
   });
-  saved.addNewFood('hi');
+  // saved.addNewFood('hi');
 
 });
 

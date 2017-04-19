@@ -67,7 +67,7 @@ $(function() {
         $('#total').text('Total: '+total + 'g')
       }
     }
-    total = $("#total_carbs").val();
+    $("#total_carbs").text(total);
 
   });
 

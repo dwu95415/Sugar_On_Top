@@ -20,7 +20,8 @@
 #searchSubmit {
 	height: 5vh;
 	text-align: center;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
+	/*padding-bottom: 5px;*/
 }
 
 .resultOptions{
@@ -31,18 +32,19 @@
 .resultName{
 	top:30%;
 	font-size:20pt;
+	margin-left:10px;
+	margin-right:10px;
 }
 
 .searchResults{
 	text-align:left;
 	position:relative;
-	height:100%;
 	padding-left: 35px;
 	padding-right:35px;
 }
 .searchResult{
 	width: 100%;
-	height: 100%;
+	height:25%;
 	margin-top: 0.67em;
 	margin-bottom: 0.67em;
 	/*border-style: solid;
@@ -187,7 +189,6 @@ opacity: .2;
 .header-button{
   height:10vh;
   width: 30vw;
-
   letter-spacing: .2vw;
   background-color: #ecf0f1;
 }
