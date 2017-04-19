@@ -24,8 +24,8 @@ var generate_result_html= function(food_name){
 	html =
 		"<div class='searchResult'>" +
 			"<div class='resultName col-md-6'>" + food_name +"</div>" +
-			"<div class='resultOptions col-md-2 col-md-push-3'>" +
-			"<button class='btn btn-default add-button' type='submit' value='"+food_name+"'>Add to Basket</button></div></div>";
+			//"<div class='resultOptions col-md-2 col-md-push-3'>" +
+			"<button class='btn btn-default add-button' type='submit' value='"+food_name+"'>Add to Basket</button></div>";
 
 	return html;
 }

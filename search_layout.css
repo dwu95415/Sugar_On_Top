@@ -5,6 +5,7 @@
 
 .mainCol{
 	height:100%;
+	width:50%;
 }
 .searchBar{
 	width:50%;
@@ -17,12 +18,12 @@
 
 .resultName{
 	top:30%;
-	font-size:2em;
+	font-size:1.6vw;
 }
 .searchResults{
 	text-align:left;
 	position:relative;
-	height:100px;
+	height:20%;
 }
 .searchResult{
 	width: 100%;
@@ -31,6 +32,7 @@
 	border-width: thin;
 	border-radius: 25px;
 	margin-top:2px;
+	position:relative;
 }
 
 /* Modal */
@@ -111,6 +113,13 @@ html,body{
 #nextBtn{
 	position:absolute;
 	right: 10%;
+}
+
+.add-button{
+	position: absolute;
+	height:50%;
+	right: 10%;
+	top: 25%;
 }
 /*.header{
 	background-color: #3498db
