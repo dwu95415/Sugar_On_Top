@@ -38,6 +38,8 @@ $(function() {
         total += parseInt(gram)
         $(".well ul").append(item);
       }
+      $('#total').text('Total: '+total + 'g')
+
   }
 
   var url_var_add = parseInt($.getUrlVar('add'));
