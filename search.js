@@ -1,31 +1,37 @@
 var FOOD_DATABASE = ["Chicken", "Beans", "Rice", "Whole Wheat Tortilla", "White Tortilla", "Pork", "Beef"]
 var basket = []
-
+the_id = 0;
 var show_search_results = function(food_name){
-	$("#search-results").html(''); 
+	$("#search-results").html('');
 	var hasResult = false;
 	for(i=0; i < FOOD_DATABASE.length; i++)
 	{
 		if(FOOD_DATABASE[i].toLowerCase().indexOf(food_name.toLowerCase())!==-1)
 		{
 			var resultHtml = generate_result_html(FOOD_DATABASE[i]);
-			$("#search-results").append(resultHtml); 
+			$("#search-results").append(resultHtml);
 			hasResult = true;
 		}
 	}
 	if(!hasResult)
 	{
 		var resultHtml = generate_no_results_html(food_name);
-		$("#search-results").append(resultHtml); 
+		$("#search-results").append(resultHtml);
 	}
 }
 
 var generate_result_html= function(food_name){
+	// html =
+	// 	"<div class='searchResult'>" +
+	// 		"<div class='resultName col-md-6'>" + food_name +"</div>" +
+	// 		//"<div class='resultOptions col-md-2 col-md-push-3'>" +
+	// 		"<button class='btn btn-lg add-button' type='submit' value='"+food_name+"'>Add to Basket</button> </div>";
 	html =
-		"<div class='searchResult'>" +
-			"<div class='resultName col-md-6'>" + food_name +"</div>" +
-			//"<div class='resultOptions col-md-2 col-md-push-3'>" +
-			"<button class='btn btn-default add-button' type='submit' value='"+food_name+"'>Add to Basket</button></div>";
+	'<li class="searchResult lf'+the_id+'"><div class="resultName" id="food'+the_id+'">'+food_name+'<div class="gram" id="gram'+the_id+'">g</div></div></li>'
+
+		// "<div class='searchResult'>" +
+		// 	"<div class='resultName col-md-6' id=food"+the_id+">" + food_name +"</div></div>";
+		the_id += 1
 
 	return html;
 }
@@ -107,5 +113,22 @@ $(document).ready(function(){
 		// Remove from Modal
 		$(this).parent().parent().remove();
 	});
+
+	$(document).on('click', function(evt) {
+	if (evt.target.id.startsWith('food')||(evt.target.id.startsWith('gram'))){
+		num = evt.target.id.substring(4)
+		if ($('li.lf'+num).hasClass('active')){
+			$('li.lf'+num).removeClass('active')
+		} else {
+			$('li.lf'+num).addClass('active')
+			var value = $("#"+evt.target.id).text()
+			basket.push(value);
+			var newItemHtml = generate_basket_html(value);
+			$("#basket-results").append(newItemHtml);
+
+		}
+	}
+});
+
 
 });

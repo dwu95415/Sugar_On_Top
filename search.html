@@ -8,14 +8,15 @@
 <script src="lib/jquery-3.1.1.js"></script>
 <script src="search.js"></script>
 <!-- Remove this script to disable logging -->
-<script src="logging.js"></script>
+<!-- <script src="logging.js"></script> -->
 </head>
 <body>
-	<div class = "col-md-2 backContainer"> <button class="btn btn-default" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
-	<div class="col-md-2 pull-right basket-container">  <img id="basket-icon" src="icons/basket.png" height="42" width="42"></div> 
+	<div class="row">
+	<div class = "col-sm-2 backContainer"> <button class="btn btn-lg" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
+	<div class="col-md-2 pull-right basket-container">  <img id="basket-icon" src="icons/basket.png" height="42" width="42"></div>
 <!-- Basket Modal -->
 <!-- The Modal -->
-<div id="basket-modal" class="basketModal">
+<div id="basket-modal" class="col-sm-2 basketModal">
   <!-- Modal content -->
   <div class="basketContent" id="basket-content">
   	<div class="modalHeader">
@@ -25,22 +26,29 @@
     <div class="row basketResults" id="basket-results"></div>
     <div class="row modalFooter">
     	<div class="col-md-4 pull-right modalFooter">
-    		<button class="btn btn-default" type="submit" id="addToMealBtn">Add Items to Meal</button>
+    		<button class="btn btn-lg" type="submit" id="addToMealBtn">Add Items to Meal</button>
     	</div>
     </div>
   </div>
 
 </div>
+</div>
+
 
 <!-- Results -->
-<div class="col-md-6 col-md-offset-3 centered mainCol">
-	<div class="row">
+<div class="row">
+<div class="col-sm-12 centered mainCol">
 		<input type="text" class="searchBar" id="search" placeholder="Search for ingredients..."></input>
-		<button class="btn btn-default" type="submit" id="searchSubmit"><i class="glyphicon glyphicon-search"></i></button>
+		<button class="btn btn-lg" type="submit" id="searchSubmit"><i class="glyphicon glyphicon-search"></i></button>
 	</div>
-	<div class="row searchResults" id="search-results">
+	<div class="row searchResults" >
+		<ul class="nav searchlist" id="search-results">
+		</ul>
+
   </div>
 </div>
-<div class = "footer"> <button class="btn btn-default" type="submit" id="nextBtn">Next</button></div>
+<div class="row"
+<div class = "footer"> <button class="btn btn-lg" type="submit" id="nextBtn">Next</button></div>
+</div>
 </body>
 </html>
