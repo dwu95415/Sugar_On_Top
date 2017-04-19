@@ -8,10 +8,10 @@ var updateInsulin = function()
     icr = $('#icr').val();
     totalCarbs = 82;
     bloodSugar = $('#bloodSugar').val();
-    console.log('tot'+totalCarbs);
-    console.log(icr);
-    console.log(bloodSugar);
-    console.log('doin good');
+    // console.log('tot'+totalCarbs);
+    // console.log(icr);
+    // console.log(bloodSugar);
+    // console.log('doin good');
     var ratio = Math.round(totalCarbs/icr);
     var extra = 0;
     if(bloodSugar >= 150)
@@ -20,7 +20,7 @@ var updateInsulin = function()
     $('#insulin').html('Inject '+ out +' units');
   }
   else{
-    console.log('noooo');
+    // console.log('noooo');
     $('#insulin').html('Inject 0 units');
   }
 }
@@ -60,11 +60,11 @@ $(document).on('click','#calculate',function(){
 });
 
 $(document).on('click','#save',function(){
-  console.log('click');
+  // console.log('click');
   $('.popup-background').animate({
     opacity: .8
   }, 250,function(){
-    console.log('done');
+    // console.log('done');
   });
   $('.save-popup').animate({
     opacity: 1
@@ -75,11 +75,11 @@ $(document).on('click','#save',function(){
 });
 
 $(document).on('click','#done',function(){
-  console.log('click');
+  // console.log('click');
   $('.popup-background').animate({
     opacity: 0
   }, 250,function(){
-    console.log('done');
+    // console.log('done');
   });
   $('.popup').animate({
     opacity: 0
@@ -91,11 +91,11 @@ $(document).on('click','#done',function(){
 });
 
 $(document).on('click','#done-save',function(){
-  console.log('click');
+  // console.log('click');
   $('.popup-background').animate({
     opacity: 0
   }, 250,function(){
-    console.log('done');
+    // console.log('done');
   });
   $('.popup').animate({
     opacity: 0
@@ -103,16 +103,16 @@ $(document).on('click','#done-save',function(){
     remove();
     $('.popup').css('z-index',-1);
   });
-  saved.addNewFood('hi');
+  // saved.addNewFood('hi');
 
 });
 
 $(document).on('click','#cancel',function(){
-  console.log('click');
+  // console.log('click');
   $('.popup-background').animate({
     opacity: 0
   }, 250,function(){
-    console.log('done');
+    // console.log('done');
   });
   $('.popup').animate({
     opacity: 0
