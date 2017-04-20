@@ -15,33 +15,33 @@
     var lunch;
     var dinner;
 
-
+    
      $(document).ready(function () {
 
             $('#backBtn').click(function(){
             window.history.back();
         });
             data = { title: "Blood Sugar",
-                            xLabel: 'Day',
+                            xLabel: 'Day', 
                             yLabel: 'mg/DL',
-                            labelFont: '19pt Arial',
+                            labelFont: '19pt Arial', 
                             dataPointFont: '10pt Arial',
                             renderTypes: [historyGraph.renderType.lines, historyGraph.renderType.points],
-
+                           
             };
 
             breakfast =  {
-                dataPoints: [{ x: getDate(15), y: 300 },
-                                         { x: getDate(14), y: 250 },
-                                         { x: getDate(13), y: 225},
+                dataPoints: [{ x: getDate(15), y: 300 }, 
+                                         { x: getDate(14), y: 250 }, 
+                                         { x: getDate(13), y: 225}, 
                                          { x: getDate(12), y: 240 },
                                          { x: getDate(11), y: 255 },
-                                         { x: getDate(10), y: 220 },
+                                         { x: getDate(10), y: 220 }, 
                                          { x: getDate(9), y: 320 },
                                          { x: getDate(8), y: 340 },
-                                         { x: getDate(7), y: 320 },
+                                         { x: getDate(7), y: 320 }, 
                                          { x: getDate(6), y: 230 },
-                                         { x: getDate(5), y: 240 },
+                                         { x: getDate(5), y: 240 }, 
                                          { x: getDate(4), y: 190},
                                          { x: getDate(3), y: 230},
                                          { x: getDate(2), y: 220},
@@ -49,18 +49,18 @@
                                          { x: getDate(0), y: 230}]
             };
 
-            lunch = {
-                dataPoints: [{ x: getDate(15), y: 220},
-                                         { x: getDate(14), y: 230 },
-                                         { x: getDate(13), y: 200},
+            lunch = { 
+                dataPoints: [{ x: getDate(15), y: 220}, 
+                                         { x: getDate(14), y: 230 }, 
+                                         { x: getDate(13), y: 200}, 
                                          { x: getDate(12), y: 300 },
                                          { x: getDate(11), y: 255 },
-                                         { x: getDate(10), y: 234 },
+                                         { x: getDate(10), y: 234 }, 
                                          { x: getDate(9), y: 333 },
                                          { x: getDate(8), y: 322 },
-                                         { x: getDate(7), y: 310 },
+                                         { x: getDate(7), y: 310 }, 
                                          { x: getDate(6), y: 201 },
-                                         { x: getDate(5), y: 204 },
+                                         { x: getDate(5), y: 204 }, 
                                          { x: getDate(4), y: 244},
                                          { x: getDate(3), y: 270},
                                          { x: getDate(2), y: 300},
@@ -68,18 +68,18 @@
                                             { x: getDate(0), y: 240}]
             };
 
-            dinner = {
-                dataPoints: [{ x: getDate(15), y: 120},
-                                         { x: getDate(14), y: 100 },
-                                         { x: getDate(13), y: 10},
+            dinner = { 
+                dataPoints: [{ x: getDate(15), y: 120}, 
+                                         { x: getDate(14), y: 100 }, 
+                                         { x: getDate(13), y: 10}, 
                                          { x: getDate(12), y: 100 },
                                          { x: getDate(11), y: 145 },
-                                         { x: getDate(10), y: 134 },
+                                         { x: getDate(10), y: 134 }, 
                                          { x: getDate(9), y: 94 },
                                          { x: getDate(8), y: 80 },
-                                         { x: getDate(7), y: 99 },
+                                         { x: getDate(7), y: 99 }, 
                                          { x: getDate(6), y: 140 },
-                                         { x: getDate(5), y: 150 },
+                                         { x: getDate(5), y: 150 }, 
                                          { x: getDate(4), y: 160},
                                          { x: getDate(3), y: 45},
                                          { x: getDate(2), y: 55},
@@ -102,13 +102,13 @@
 
         if(dd<10) {
             dd='0'+dd
-        }
+        } 
 
         if(mm<10) {
             mm='0'+mm
-        }
+        }    
 
-            today = mm+'/'+dd
+            today = mm+'/'+dd 
         return today;
     };
 
@@ -152,31 +152,27 @@
         }
     </script> -->
 </head>
-<body>
-<div clas='container'>
-  <div class="row">
-    <div class = "col-md-2 backContainer"> <button class="header-button btn btn-lg" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
-  </div>
-  <div class='content'>
-    <div class="row">
-      <!-- <div class="col-md-2" id="sideColumn"></div> -->
-      <div class="col-sm-12" id="graphColumn">
-          <canvas id="canvas" width="800" height="600"></canvas>
-          <canvas id="breakfast" width="800" height="600"></canvas>
-          <canvas id="lunch" width="800" height="600"></canvas>
-          <canvas id="dinner" width="800" height="600"></canvas>
-      </div>
-      <div class="row">
-      <div class= "col-md-2" id="checkBoxColumn">
-          <input id="breakfastBox" type="checkbox" background-color = "red" checked = 'true' onclick="update(id);"/>Breakfast</br>
-          <input id="lunchBox" type="checkbox" color = "blue" checked = 'true' onclick="update(id);"/>Lunch</br>
-          <input id="dinnerBox" type="checkbox" color = "green" checked = 'true' onclick="update(id);"/>Dinner</br>
-      </div>
+<body style="margin-left:50px;margin-top:50px;">
+<div class="container">
+    <div class = "col-md-2 backContainer"> <button class="btn btn-default" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
+    <div class="col-md-8" id="graphColumn">
+    <div width = 600 align = right float = right>
+    <p id="breakfastBox"/><font color = "red" font size = "5">Breakfast</br>
+        <p id="lunchBox"/><font color = "blue" font size = "5">Lunch</br>
+        <p id="dinnerBox"/><font color = "green" font size = "5">Dinner</br>
     </div>
-      </div>
-      <!-- <div class="row">
-      </div> -->
-  </div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <canvas id="breakfast" width="800" height="600"></canvas>
+        <canvas id="lunch" width="800" height="600"></canvas>
+        <canvas id="dinner" width="800" height="600"></canvas>
+    </div>
+
+    
+</div>
+<div class = "row">
+    <p id="lol"/><font color = "red" font size = "5">Average</br>
+    </div>
+
 </div>
 </body>
 </html>
