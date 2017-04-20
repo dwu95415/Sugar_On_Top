@@ -155,20 +155,20 @@
 <body style="margin-left:50px;margin-top:50px;">
 <div class="container">
     <div class = "col-md-2 backContainer"> <button class="btn btn-default" type="submit" id="backBtn"><i class="glyphicon glyphicon-arrow-left" ></i></button></div>
-  <div class="row">
-    <div class="col-md-2" id="sideColumn"></div>
     <div class="col-md-8" id="graphColumn">
+    <div width = 600 align = right float = right>
+    <p id="breakfastBox"/><font color = "red" font size = "5">Breakfast</br>
+        <p id="lunchBox"/><font color = "blue" font size = "5">Lunch</br>
+        <p id="dinnerBox"/><font color = "green" font size = "5">Dinner</br>
+    </div>
         <canvas id="canvas" width="800" height="600"></canvas>
         <canvas id="breakfast" width="800" height="600"></canvas>
         <canvas id="lunch" width="800" height="600"></canvas>
         <canvas id="dinner" width="800" height="600"></canvas>
     </div>
-    <div class= "col-md-2" id="checkBoxColumn">
-        <input id="breakfastBox" type="checkbox" background-color = "red" checked = 'true' onclick="update(id);"/>Breakfast</br>
-        <input id="lunchBox" type="checkbox" color = "blue" checked = 'true' onclick="update(id);"/>Lunch</br>
-        <input id="dinnerBox" type="checkbox" color = "green" checked = 'true' onclick="update(id);"/>Dinner</br>
-    </div>
-    </div>
+</div>
+<div>
+
 </div>
 </body>
 </html>

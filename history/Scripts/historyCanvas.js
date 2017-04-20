@@ -115,10 +115,13 @@ var historyGraph = function () {
             var txt = Math.round(maxYValue - ((i == 0) ? 0 : yPos / ratio));
             var txtSize = ctx.measureText(txt);
             ctx.fillText(txt, margin.left - ((txtSize.width >= 14) ? txtSize.width : 10) - 7, yPos);
-
+        }
+        
+        for (var i = 0; i < 15; i++) {   
             //x axis labels
-            txt = dates[i];
-            txtSize = ctx.measureText(txt);
+            var txt = dates[i];
+            var txtSize = ctx.measureText(txt);
+            ctx.font = '10pt Calibri';
             ctx.fillText(txt, xPos, ymax + (margin.bottom / 3));
             xPos += xInc;
         }
