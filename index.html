@@ -67,23 +67,20 @@ Welcome to <b>Sugar On Top</b>
       </div>
       <!--popup for carbs-->
       <div class='center-div popup carb-popup invisible'>
-        <div class='form-group row'>
-          <label class='col-xs-6 col-form-label'>Total Carb Intake:</label>
-          <div class='col-xs-4'>
-            <input class='form-control' id='total_carbs' type='number' name='total_carbs' value='82'>
-          </div>
-
+        <div class='row input-row'>
+          <label class='col-xs-6 input-label'>Total Carb Intake:</label>
+            <input class='input-num col-xs-4' id='total_carbs' type='number'  value='82'>
         </div>
         <div class='row input-row'>
-          <span class = 'col-xs-6 center input-label'>Insulin to Carb Ratio: </span>
+          <label class = 'col-xs-6 input-label'>Insulin to Carb Ratio: </label>
           <input class='input-num col-xs-4' id='icr' type="number" value=3 />
         </div>
         <div class='row input-row'>
-          <span class = 'col-xs-6 center input-label'>Blood Sugar: </span>
+          <label class = 'col-xs-6 input-label'>Blood Sugar: </label>
           <input class='input-num col-xs-4' id='bloodSugar' type="number" value=100 />
         </div>
         <div class='row input-row'>
-          <span class = 'col-xs-12 input-label insulin center' id='insulin'>Inject 5 units</span>
+          <label class = 'col-xs-12 input-label insulin center' id='insulin'>Inject 5 units</label>
         </div>
         <div class="row input-row">
              <button type='button' id='cancel' class='btn'>Cancel</button>

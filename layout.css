@@ -31,18 +31,7 @@
   padding-left: 2% !important;
 }*/
 
-/*#history{
-  text-align:center;
-  /*padding-left: 2* !important;
-}*/
 
-/*input, input:before, input:after {
-    -webkit-user-select: initial;
-    -khtml-user-select: initial;
-    -moz-user-select: initial;
-    -ms-user-select: initial;
-    user-select: initial;
-   } */
 #header{
   text-align:center;
   height: 10vh;
@@ -146,4 +135,8 @@ button .full-width{
 
 .header-button:focus{
   outline: none;
+}
+
+.input-label{
+  text-align: right;
 }
