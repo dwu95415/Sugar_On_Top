@@ -1,6 +1,6 @@
 body,html{
   height: 100%;
-  
+
 }
 
 .center{
@@ -72,4 +72,8 @@ body,html{
   color: black;
   font-size: 3vh;
   /*padding: .5vh;*/
+}
+.saved-title{
+  font-size: 3vh;
+
 }
