@@ -1,9 +1,15 @@
+body{
+  
+}
+
 /*body {
     font: 20pt Helvetica;
 }*/
 #content {
     padding-top: 20px;
 }
+
+
 
 #banner{
   background: #bdc3c7;
