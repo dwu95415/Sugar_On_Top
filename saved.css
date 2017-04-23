@@ -24,7 +24,7 @@ body,html{
 }
 
 .button-bar{
-  height: 9vh;
+  height: 10vh;
   width: 100%;
 
   display:inline-block;
@@ -34,7 +34,7 @@ body,html{
 .saved-list{
   position: relative;
   height: auto;
-  max-height: 90vh;
+  max-height: 81vh;
   overflow-x: hidden;
 }
 
@@ -76,4 +76,20 @@ body,html{
 .saved-title{
   font-size: 3vh;
 
+}
+.header-button{
+  height:10vh;
+  width: 30vw;
+
+  letter-spacing: .2vw;
+  background-color: #ecf0f1;
+}
+
+.header-button:active{
+  background-color: #7f8c8d;
+  color: purple;
+}
+
+.header-button:focus{
+  outline: none;
 }
