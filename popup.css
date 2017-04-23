@@ -37,8 +37,9 @@ body,html{
 .popup{
   opacity: 0;
   position: absolute;
-  background-color: #bdc3c7;
-  top:25%;
+  background-color: #e3e7e8;
+  top:10%;
+  height: auto;
   /*left:0px;*/
 }
 

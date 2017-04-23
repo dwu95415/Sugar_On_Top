@@ -74,12 +74,12 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Modal Content/Box */
 .basketContent {
-    background-color: #fefefe;
+    background-color: #e3e7e8;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -89,10 +89,9 @@
 }
 
 .basketResults{
-	text-align:left;
-	position:relative;
-	height:200px;
-	overflow:auto;
+	opacity: 0;
+  position: absolute;
+  top:25%;
 }
 .basketResult{
 	width: 100%;
@@ -180,6 +179,9 @@ opacity: .2;
 	/*padding-right:10px*/
 }
 
+#addToMealBtn {
+	background-color: #2ecc71;
+}
 /*.header{
 	background-color: #3498db
 }*/
