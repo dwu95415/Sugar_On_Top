@@ -34,7 +34,7 @@ $(function() {
         var name = items[i].name;
         var gram = items[i].gram;
         var item =
-        '<li class=" active lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
+        '<li class=" active list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
         total += parseInt(gram)
         $(".well ul").append(item);
       }
