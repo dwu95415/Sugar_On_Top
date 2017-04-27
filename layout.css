@@ -43,6 +43,21 @@ body{
   height: 10vh;
   margin-bottom: 10px;
 }
+
+.search-container{
+  text-align:center;
+}
+
+.search-bar{
+  
+}
+
+.ui-menu .ui-menu-item a{
+    color: #96f226;
+    border-radius: 0px;
+    border: 1px solid #454545;
+}
+
 #calculate {
   position:absolute;
   bottom:0px;

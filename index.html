@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Sugar OnTop</title>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+   <!--  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" /> -->
 
     <link rel="stylesheet" href="layout.css">
     <!-- Latest compiled and minified CSS -->
@@ -9,6 +9,8 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
@@ -39,7 +41,6 @@ Welcome to <b>Sugar On Top</b>
     <button type="button" id="save" class="header-button btn btn-lg" >
       <span class="glyphicon glyphicon-floppy-disk"></span> Save
      </button>
-     <button type="button" id="add-item" class="header-button btn btn-lg" ><span class="glyphicon glyphicon-plus"></span> Add</button>
   </div>
 
   <!-- <div class="wrapper container">
@@ -49,12 +50,18 @@ Welcome to <b>Sugar On Top</b>
           </div>
         </div>
   </div> -->
+    <div class = "row search-container">
+      <input type="text" class="search-bar" id="search" placeholder="e.g. Brown Rice, Chicken..."></input>
+    <!--   <button type="button" id="add-item" class="header-button btn btn-lg" ><span class="glyphicon glyphicon-plus"></span> Add</button> -->
+    </div>
 
      <div class="well">
        <ul class="nav">
        </ul>
      </div><!--/.well -->
    </div><!--/span-->
+
+
 
     <div class="footer">
     <div class='h1' id="total">Total: 0g</div>

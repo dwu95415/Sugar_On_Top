@@ -42,6 +42,12 @@ $(function() {
 
   }
 
+  var availableFoods = ["rice", "black beans", "chicken", "tortilla", "cheese", "salsa", "lemonade", "cookie"];
+
+  $( "#search" ).autocomplete({
+      source: availableFoods
+  });
+
   var url_var_add = parseInt($.getUrlVar('add'));
   if(url_var_add==1)
   {
