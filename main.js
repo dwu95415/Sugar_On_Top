@@ -19,8 +19,7 @@ $(function() {
     }
   });
 
-  var add = function(){
-    var items = [
+  var items = [
         {name:"rice",gram:"10",portion:"1"},
         {name:"black beans",gram:"5",portion:"1"},
         {name:"chicken",gram:"5",portion:"1"},
@@ -29,22 +28,26 @@ $(function() {
         {name:"salsa",gram:"10",portion:"1"},
         {name:"lemonade",gram:"12",portion:"1"},
         {name:"cookie",gram:"20",portion:"1"}
-      ]
+      ];
+
+  var add = function(foodName){
       for (i=0; i < items.length; i++){
         var name = items[i].name;
         var gram = items[i].gram;
-        var item =
-        '<li class=" active list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
-        total += parseInt(gram)
-        $(".well ul").append(item);
+        if(foodName == name){
+          var item =
+          '<li class=" active list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
+          total += parseInt(gram)
+          $(".well ul").append(item);
+        }
       }
       $('#total').text('Total: '+total + 'g')
 
   }
 
   $("#addFoodBtn").click(function(){
-    console.log("here");
-    add();
+    query = $("#search").val()
+    add(query);
   });
 
   var availableFoods = ["rice", "black beans", "chicken", "tortilla", "cheese", "salsa", "lemonade", "cookie"];
@@ -58,7 +61,8 @@ $(function() {
         results: function() {}
     }
   }).focus(function() {
-            $(this).autocomplete("search", "");
+            query = $("#search").val();
+            $(this).autocomplete("search", query);
   });
 
   jQuery.ui.autocomplete.prototype._resizeMenu = function () {
