@@ -52,11 +52,20 @@ body{
   
 }
 
+.ui-menu li{
+  list-style:none;
+}
 .ui-menu .ui-menu-item a{
     color: #96f226;
     border-radius: 0px;
     border: 1px solid #454545;
 }
+
+ .ui-autocomplete { 
+            cursor:pointer; 
+            height:120px; 
+            overflow-y:scroll;
+  } 
 
 #calculate {
   position:absolute;
@@ -160,4 +169,41 @@ button .full-width{
 
 .input-label{
   text-align: right;
+}
+
+
+
+
+#search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    width:50%;
+    margin-left: 24%;
+}
+
+#search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#search-input .glyphicon-search{
+    font-size: 23px;
 }

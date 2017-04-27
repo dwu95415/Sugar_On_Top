@@ -42,11 +42,29 @@ $(function() {
 
   }
 
+  $("#addFoodBtn").click(function(){
+    console.log("here");
+    add();
+  });
+
   var availableFoods = ["rice", "black beans", "chicken", "tortilla", "cheese", "salsa", "lemonade", "cookie"];
 
   $( "#search" ).autocomplete({
-      source: availableFoods
+      source: availableFoods,
+      scroll:true,
+      minLength:0,
+      messages: {
+        noResults: '',
+        results: function() {}
+    }
+  }).focus(function() {
+            $(this).autocomplete("search", "");
   });
+
+  jQuery.ui.autocomplete.prototype._resizeMenu = function () {
+    var ul = this.menu.element;
+    ul.outerWidth(this.element.outerWidth());
+  }
 
   var url_var_add = parseInt($.getUrlVar('add'));
   if(url_var_add==1)
