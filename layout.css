@@ -103,6 +103,10 @@ text-decoration: underline;
       margin:0;
       font-size:3vh*/
   /*}*/
+  #banner-header{
+      position:absolute;
+      top:0px;
+  }
 
 #calculate {
   position:absolute;
@@ -150,6 +154,7 @@ text-decoration: underline;
   background: white !important;
   margin-bottom:10px !important;
   height:450px;
+  overflow-y:auto;
 }
 
 .active{

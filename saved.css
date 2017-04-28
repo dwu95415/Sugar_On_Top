@@ -4,7 +4,7 @@ body,html{
 }
 
 .header{
-/*width:100%;*/
+
   /*text-align:center;*/
   height: 10vh;
   /*margin-bottom: 10px;*/
@@ -49,19 +49,27 @@ text-decoration: underline;
   display:inline-block;
 }
 
-
-.saved-list{
+.food {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  /*font-weight: bold;*/
+}
+/*.saved-list{
   position: relative;
   height: auto;
   max-height: 81vh;
   overflow-x: hidden;
-}
+}*/
 
-.food-item{
+/*.food-item{
   height: 10vh;
   padding: .25vh;
   background-color: #ecf0f1;
-}
+}*/
 /*
 .selected{
   background-color: #3498db;
