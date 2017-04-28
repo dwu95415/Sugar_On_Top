@@ -41,6 +41,7 @@ $(function() {
           $(".well ul").append(item);
         }
       }
+      $("#calculate").prop('disabled',false);
       $('#total').text('Total: '+total + 'g')
 
   }
@@ -106,6 +107,8 @@ $(function() {
     // $('#save').click(function() {
     //    window.location = "saved.html";
     // });
+// $("#calculate").property
+$("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
 

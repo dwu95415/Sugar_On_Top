@@ -118,7 +118,7 @@ text-decoration: underline;
     padding-left: 2% !important;
     background: #2ecc71;
     margin:0;
-    font-size:3vh
+    font-size:3vh;
 }
 .footer {
   position: fixed;
