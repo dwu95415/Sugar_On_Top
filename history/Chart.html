@@ -3,6 +3,8 @@
 <head>
     <title>History</title>
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../layout.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <script src=
   "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -11,7 +13,6 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/js/mdb.min.js"></script>
 
-  <link rel="stylesheet" href="layout.css">
   <script src='Scripts/historyCanvas.js'></script>
 
 </head>
@@ -24,7 +25,7 @@
       </button>
     </div>
   </div><!--/span-->
-  <div class="row" id=banner-header>
+  <div class="row" id=banner-header style="position:relative">
     <div class="col-xs-4 header">
       <button type="button" id="history" class="header-button current" >
           <!-- <span class="glyphicon glyphicon-time">   </span>  -->
@@ -47,14 +48,16 @@
     </div>
 </div>
 
-  <div class = 'row'>
-
+  <div class ="row">
+<!-- <div class="col-xs-12"> -->
       <!-- Wrapper for slides -->
       <div class="chart-inner">
         <div class="graph">
           <canvas id="bsGraph" height=”100″></canvas>
         </div>
       </div><!-- End Carousel -->
+  <!-- </div> -->
+
   </div>
 </body>
 </html>

@@ -33,7 +33,7 @@ body{
 }*/
 
 #banner{
-    background: #3498db;
+    background: white;
   color: black;
   height:3.7%;
   font-size: 18px;
@@ -43,22 +43,33 @@ body{
 
 
 .header{
-    width:100%;
+    /*width:100%;*/
   /*text-align:center;*/
   height: 10vh;
-  /*margin-bottom: 10px;*/
-  background: grey;
+  margin-bottom: 10px;
+  background: 	#f7f7f7;
+  border-color:	#f7f7f7;
 }
 
 .header-button{
+
     width:100%;
-    color:white;
+    color:black;
     height: 10vh;
     font-size: 15pt;
     /*background: #3498db;*/
 }
 .current{
-text-decoration: underline;
+/*text-decoration: underline;*/
+/*padding:0px;
+width:100%;*/
+border-color:	#f7f7f7;
+border-bottom-color:red;
+/*border-top-color:white;
+border-left-color:white;
+border-right-color:white;*/
+
+background-color: 	#f7f7f7;
 }
 /*.header-button:active{
   background-color: #7f8c8d;
