@@ -11,12 +11,7 @@ body{
 
 
 
-#banner{
-  background: #bdc3c7;
-  color: #2c3e50;
-  height:3.7%;
-  font-size: 18px;
-}
+
 
 #container{
   /*padding-left: 5px;
@@ -37,12 +32,42 @@ body{
   padding-left: 2% !important;
 }*/
 
-
-#header{
+#banner{
+    background: #3498db;
+  color: black;
+  height:3.7%;
+  font-size: 18px;
   text-align:center;
-  height: 10vh;
-  margin-bottom: 10px;
+
 }
+
+
+.header{
+    width:100%;
+  /*text-align:center;*/
+  height: 10vh;
+  /*margin-bottom: 10px;*/
+  background: grey;
+}
+
+.header-button{
+    width:100%;
+    color:white;
+    height: 10vh;
+    font-size: 15pt;
+    /*background: #3498db;*/
+}
+.current{
+text-decoration: underline;
+}
+/*.header-button:active{
+  background-color: #7f8c8d;
+  color: purple;
+}
+
+.header-button:focus{
+  outline: none;
+}*/
 
 .search-container{
   text-align:center;
@@ -66,6 +91,18 @@ body{
             height:120px;
             overflow-y:scroll;
   }
+  /*#calculate {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+      width: 100%;
+      height: 9vh;
+      /*height: 56px;*/
+      /*padding-left: 2% !important;
+      background: #2ecc71;
+      margin:0;
+      font-size:3vh*/
+  /*}*/
 
 #calculate {
   position:absolute;
@@ -95,10 +132,10 @@ body{
     margin-bottom:10px;
 }
 
-button .full-width{
+/*button .full-width{
   width:100%;
   display:block; //only if you're having issues
-}
+}*/
 /*.top-buffer { margin-top:20px; }*/
 
 #total{
@@ -150,22 +187,14 @@ button .full-width{
   padding: .5vh;
 }
 
-.header-button{
+/*.header-button{
   height:10vh;
   width: 30vw;
 
   letter-spacing: .2vw;
   background-color: #ecf0f1;
-}
+}*/
 
-.header-button:active{
-  background-color: #7f8c8d;
-  color: purple;
-}
-
-.header-button:focus{
-  outline: none;
-}
 
 .input-label{
   text-align: right;

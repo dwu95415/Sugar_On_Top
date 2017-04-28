@@ -1,6 +1,15 @@
 
 var selected = 0;
 
+$(document).on('click','#save',function(){
+    window.location = "index.html";
+
+});
+    // $('#save').click(function(){
+    //
+    //
+    //   });
+
 $(document).on('click','.back',function(){
   window.history.back();
 });

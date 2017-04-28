@@ -59,20 +59,20 @@ $(document).on('click','#calculate',function(){
 
 });
 
-$(document).on('click','#save',function(){
-  // console.log('click');
-  $('.popup-background').animate({
-    opacity: .8
-  }, 250,function(){
-    // console.log('done');
-  });
-  $('.save-popup').animate({
-    opacity: 1
-  }, 250);
-  $('.save-popup').css('z-index',1);
-  add();
-
-});
+// $(document).on('click','#save',function(){
+//   // console.log('click');
+//   $('.popup-background').animate({
+//     opacity: .8
+//   }, 250,function(){
+//     // console.log('done');
+//   });
+//   $('.save-popup').animate({
+//     opacity: 1
+//   }, 250);
+//   $('.save-popup').css('z-index',1);
+//   add();
+//
+// });
 
 $(document).on('click','#done',function(){
   // console.log('click');
