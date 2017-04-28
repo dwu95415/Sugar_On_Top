@@ -104,6 +104,11 @@ text-decoration: underline;
   font-size: 3vh;
 
 }
+.saved-list{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 80vh;
+}
 /*.header-button{
   height:10vh;
   width: 30vw;
