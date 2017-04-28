@@ -3,11 +3,30 @@ body,html{
 
 }
 
-.center{
-  text-align: center;
+.header{
+
+  /*text-align:center;*/
+  height: 10vh;
+  /*margin-bottom: 10px;*/
+  background: grey;
 }
 
-.back{
+.header-button{
+    width:100%;
+    color:white;
+    height: 10vh;
+    font-size: 15pt;
+    /*background: #3498db;*/
+}
+.current{
+text-decoration: underline;
+}
+
+/*.center{
+  text-align: center;
+}*/
+
+/*.back{
   height: inherit;
   width: 25vw;
   letter-spacing: .2vw;
@@ -17,7 +36,7 @@ body,html{
 .back:active{
   background-color: #7f8c8d;
   color: white;
-}
+}*/
 
 .back:focus{
   outline: none;
@@ -30,24 +49,32 @@ body,html{
   display:inline-block;
 }
 
-
-.saved-list{
+.food {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  /*font-weight: bold;*/
+}
+/*.saved-list{
   position: relative;
   height: auto;
   max-height: 81vh;
   overflow-x: hidden;
-}
+}*/
 
-.food-item{
+/*.food-item{
   height: 10vh;
   padding: .25vh;
   background-color: #ecf0f1;
-}
-
+}*/
+/*
 .selected{
   background-color: #3498db;
   color: white;
-}
+}*/
 
 .food-item h3{
   margin-left: 3vw;
@@ -77,7 +104,7 @@ body,html{
   font-size: 3vh;
 
 }
-.header-button{
+/*.header-button{
   height:10vh;
   width: 30vw;
 
@@ -92,4 +119,4 @@ body,html{
 
 .header-button:focus{
   outline: none;
-}
+}*/

@@ -36,11 +36,12 @@ $(function() {
         var gram = items[i].gram;
         if(foodName == name){
           var item =
-          '<li class=" active list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
+          '<li class=" list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
           total += parseInt(gram)
           $(".well ul").append(item);
         }
       }
+      $("#calculate").prop('disabled',false);
       $('#total').text('Total: '+total + 'g')
 
   }
@@ -83,32 +84,35 @@ $(function() {
 
     if (evt.target.id.startsWith('food')||(evt.target.id.startsWith('gram'))){
       num = evt.target.id.substring(4)
-      if ($('li.lf'+num).hasClass('active')){
-        $('li.lf'+num).removeClass('active')
-        var current = $('#total').text().substring(6).slice(0,-1)
-        var sub_total = $('#gram'+num).text().slice(0,-1)
-        total -= parseInt(sub_total)
-        $('#total').text('Total: '+total + 'g')
-
-      } else {
-        $('li.lf'+num).addClass('active')
-        var current = $('#total').text().substring(6).slice(0,-1)
-        var sub_total = $('#gram'+num).text().slice(0,-1)
-        total += parseInt(sub_total)
-        $('#total').text('Total: '+total + 'g')
-      }
-    }
-    $("#total_carbs").text(total);
+    //   if ($('li.lf'+num).hasClass('active')){
+    //     $('li.lf'+num).removeClass('active')
+    //     var current = $('#total').text().substring(6).slice(0,-1)
+    //     var sub_total = $('#gram'+num).text().slice(0,-1)
+    //     total -= parseInt(sub_total)
+    //     $('#total').text('Total: '+total + 'g')
+    //
+    //   } else {
+    //     $('li.lf'+num).addClass('active')
+    //     var current = $('#total').text().substring(6).slice(0,-1)
+    //     var sub_total = $('#gram'+num).text().slice(0,-1)
+    //     total += parseInt(sub_total)
+    //     $('#total').text('Total: '+total + 'g')
+    //   }
+    // }
+    // $("#total_carbs").text(total);
+}
 
   });
 
     // $('#save').click(function() {
     //    window.location = "saved.html";
     // });
+// $("#calculate").property
+$("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
 
-      window.location = "search.html";
+      window.location = "saved.html";
 
       });
 
