@@ -196,7 +196,10 @@
 //
 // } ();
 
+$(document).on('click','#save',function(){
+    window.location = "../index.html";
 
+});
 
 $(function () {
     var data = {
