@@ -64,10 +64,11 @@ body{
 /*padding:0px;
 width:100%;*/
 border-color:	#f7f7f7;
-border-bottom-color:red;
+border-bottom-color:#27ae60;
 /*border-top-color:white;
 border-left-color:white;
 border-right-color:white;*/
+color: black;
 
 background-color: 	#f7f7f7;
 }
@@ -102,23 +103,21 @@ background-color: 	#f7f7f7;
             height:120px;
             overflow-y:scroll;
   }
-  /*#calculate {
-    position:absolute;
-    bottom:0px;
-    left:0px;
-      width: 100%;
-      height: 9vh;
-      /*height: 56px;*/
-      /*padding-left: 2% !important;
-      background: #2ecc71;
-      margin:0;
-      font-size:3vh*/
-  /*}*/
+
   #banner-header{
       position:absolute;
       top:0px;
   }
 
+  #addFood {
+      background-color: #2ecc71;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 1vh;
+      height: 9vh;
+      text-align: center;
+  }
 #calculate {
   position:absolute;
   bottom:0px;
@@ -167,6 +166,7 @@ background-color: 	#f7f7f7;
   height:450px;
   overflow-y:auto;
 }
+
 
 .active{
   background-color:#3498db;
