@@ -173,13 +173,9 @@ background-color: 	#f7f7f7;
   color:white;
 }
 
-.gram{
-  float:right;
-  padding-right: 10px;
-}
 
 .food {
-  display: block;
+  display: inline-block;
   font-size: 2em;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
@@ -251,4 +247,35 @@ background-color: 	#f7f7f7;
 
 #search-input .glyphicon-search{
     font-size: 23px;
+}
+
+
+.portion-container{
+  text-align:center;
+  height:4em;
+  float:right;
+  display:inline-block;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+  font-size:2em;
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  height:1.5em;
+  display:inline-block;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+
+.gram{
+  font-size:2.5em;
+}
+
+.close{
+  float: left!important;
 }

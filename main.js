@@ -30,22 +30,55 @@ $(function() {
         {name:"cookie",gram:"20",portion:"1"}
       ];
 
+  var num_ingredients = 0;
   var add = function(foodName){
       for (i=0; i < items.length; i++){
         var name = items[i].name;
         var gram = items[i].gram;
         if(foodName == name){
+          num_ingredients +=1;
           var item =
-          '<li class=" list-group-item lf'+i+'"><div class="food" id="food'+i+'">'+name+'<div class="gram" id="gram'+i+'">'+gram+'g</div></div></li>'
-          total += parseInt(gram)
+          '<li class=" list-group-item lf'+i+'"><span class=close aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
+          '<div class="portion-container">' +
+          '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/Icon-Placeholder.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' + 
+          '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
+          '</div></li>';
+
           $(".well ul").append(item);
+          // Radio button listener
+          $("input:radio").change(function(){
+            if ($(this).is(':checked'))
+            {
+              $(this).parent().siblings("p").text($(this).val()+"g");
+            }
+            recalculate_total();
+          });
+          // Delete list item listener
+          $(".close").click(function(){
+            $(this).parent().remove();
+            recalculate_total();
+          });
         }
-        // If input is not in - then don't
 
       }
       $("#calculate").prop('disabled',false);
-      $('#total').text('Total: '+total + 'g')
+      recalculate_total();
+      //$('#total').text('Total: '+total + 'g')
 
+  }
+
+  var recalculate_total = function(){
+    var total = 0;
+    $("input:radio").each(function(){
+       if ($(this).is(':checked'))
+            {
+              total += parseInt($(this).val());
+            }
+    });
+    $("#total").text('Total: '+total + 'g')
   }
 
   $("#addFoodBtn").click(function(){
