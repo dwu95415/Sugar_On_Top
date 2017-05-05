@@ -329,17 +329,14 @@ var options = {
                 axisLabelFontFamily: 'Verdana, Arial',
                 axisLabelPadding: 10
             },
-            yaxes: {},
+            yaxis: {
+            },
             legend: {
-                noColumns: 0,
-                labelBoxBorderColor: "#000000",
-                position: "nw"
+              show: false
             },
             grid: {
                 hoverable: true,
-                borderWidth: 2,
-                borderColor: "#633200",
-                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
+                borderWidth:0
             },
             colors: color_order
         };

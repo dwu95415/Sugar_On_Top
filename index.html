@@ -101,7 +101,10 @@
       <!--popup for carbs-->
       <div class='center-div popup carb-popup invisible'>
         <div class='row popup-title'>
-          <h1>Calculate</h1>
+          <!-- <h1><span id='cancel' aria-hidden="true">&times;</span><h1> -->
+          <div id='popup-title-text'>
+            <h1>Calculate</h1>
+          </div>
         </div>
         <div class='popup-content'>
           <div class='row input-row'>
@@ -119,7 +122,6 @@
         </div>
         <div class='row popup-footer'>
           <div class="row input-row">
-               <button type='button' id='cancel' class='btn'>Cancel</button>
                <button type='button' id='done' class='btn'>Save to History</button>
           </div>
         </div>

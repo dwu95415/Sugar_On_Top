@@ -27,7 +27,6 @@ body,html{
 }
 
 .center-div{
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -45,9 +44,10 @@ body,html{
     background-color: #3498db;
     color: white;
     width: auto;
-    text-align: center;
 }
-
+#popup-title-text{
+  text-align: center;
+}
 .popup-content{
   text-align: center;
   height:40vh;
@@ -57,7 +57,7 @@ body,html{
     background-color: #3498db;
     color: white;
     width: auto;
-    text-align: center;
+    text-align: right;
 }
 
 label{
@@ -76,9 +76,9 @@ label{
 }
 
 #cancel{
-  position:relative;
+  left: 10vw;
   background-color: #e74c3c;
-  left: 1vw;
+  text-align: center;
 }
 
 #done{
