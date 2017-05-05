@@ -1,5 +1,5 @@
 body{
-  
+
 }
 
 /*body {
@@ -11,12 +11,7 @@ body{
 
 
 
-#banner{
-  background: #bdc3c7;
-  color: #2c3e50;
-  height:3.7%;
-  font-size: 18px;
-}
+
 
 #container{
   /*padding-left: 5px;
@@ -37,19 +32,61 @@ body{
   padding-left: 2% !important;
 }*/
 
-
-#header{
+#banner{
+    background: white;
+  color: black;
+  height:3.7%;
+  font-size: 18px;
   text-align:center;
+
+}
+
+
+.header{
+    /*width:100%;*/
+  /*text-align:center;*/
   height: 10vh;
   margin-bottom: 10px;
+  background: 	#f7f7f7;
+  border-color:	#f7f7f7;
 }
+
+.header-button{
+
+    width:100%;
+    color:black;
+    height: 10vh;
+    font-size: 15pt;
+    /*background: #3498db;*/
+}
+.current{
+/*text-decoration: underline;*/
+/*padding:0px;
+width:100%;*/
+border-color:	#f7f7f7;
+border-bottom-color:#27ae60;
+/*border-top-color:white;
+border-left-color:white;
+border-right-color:white;*/
+color: black;
+
+background-color: 	#f7f7f7;
+}
+/*.header-button:active{
+  background-color: #7f8c8d;
+  color: purple;
+}
+
+.header-button:focus{
+  outline: none;
+}*/
 
 .search-container{
   text-align:center;
 }
 
 .search-bar{
-  
+
 }
 
 .ui-menu li{
@@ -61,12 +98,26 @@ body{
     border: 1px solid #454545;
 }
 
- .ui-autocomplete { 
-            cursor:pointer; 
-            height:120px; 
+ .ui-autocomplete {
+            cursor:pointer;
+            height:120px;
             overflow-y:scroll;
-  } 
+  }
 
+  #banner-header{
+      position:absolute;
+      top:0px;
+  }
+
+  #addFood {
+      background-color: #2ecc71;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 1vh;
+      height: 9vh;
+      text-align: center;
+  }
 #calculate {
   position:absolute;
   bottom:0px;
@@ -77,7 +128,7 @@ body{
     padding-left: 2% !important;
     background: #2ecc71;
     margin:0;
-    font-size:3vh
+    font-size:3vh;
 }
 .footer {
   position: fixed;
@@ -95,10 +146,10 @@ body{
     margin-bottom:10px;
 }
 
-button .full-width{
+/*button .full-width{
   width:100%;
   display:block; //only if you're having issues
-}
+}*/
 /*.top-buffer { margin-top:20px; }*/
 
 #total{
@@ -113,7 +164,9 @@ button .full-width{
   background: white !important;
   margin-bottom:10px !important;
   height:450px;
+  overflow-y:auto;
 }
+
 
 .active{
   background-color:#3498db;
@@ -150,22 +203,14 @@ button .full-width{
   padding: .5vh;
 }
 
-.header-button{
+/*.header-button{
   height:10vh;
   width: 30vw;
 
   letter-spacing: .2vw;
   background-color: #ecf0f1;
-}
+}*/
 
-.header-button:active{
-  background-color: #7f8c8d;
-  color: purple;
-}
-
-.header-button:focus{
-  outline: none;
-}
 
 .input-label{
   text-align: right;

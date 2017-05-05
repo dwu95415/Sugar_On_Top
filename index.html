@@ -17,7 +17,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
-    <link href="http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet"/>
+    <link href="https://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet"/>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -33,17 +33,30 @@
 </head>
 
 <body>
-<div class="header" id="banner">
-Welcome to <b>Sugar On Top</b>
-</div>
+<!-- <div class="header" id="banner">
+<b>Sugar On Top</b>
+</div> -->
 
-<div class="row top-buffer">
-  <div class="col-sm-4" id="header">
-    <button type="button" id="history" class="btn btn-lg header-button" ><span class="glyphicon glyphicon-time">   </span> History </button>
-    <button type="button" id="save" class="header-button btn btn-lg" >
+<div class="row" id=banner-header>
+  <div class="col-xs-4 header" style="padding: 0px;">
+    <button type="button" id="history" class="header-button" >
+        <!-- <span class="glyphicon glyphicon-time">   </span>  -->
+        History </button>
+</div>
+    <!-- <div class="col-xs-4 header">
+    <button type="button" id="save" class="header-button" >
       <span class="glyphicon glyphicon-floppy-disk"></span> Save
      </button>
-     <button type="button" id="add-item" class="header-button btn btn-lg" ><span class="glyphicon glyphicon-plus"></span> Add</button>
+ </div> -->
+ <div class="col-xs-4 header" style="padding: 0px;">
+ <button type="button" id="save" class="header-button current" >
+    Calculate
+  </button>
+</div>
+     <div class="col-xs-4 header" style="padding: 0px;">
+     <button type="button" id="add-item" class="header-button" >
+<!-- <span class="glyphicon glyphicon-bookmark"></span> -->
+          Foods</button>
   </div>
 
   <!-- <div class="wrapper container">
@@ -64,11 +77,11 @@ Welcome to <b>Sugar On Top</b>
                     </span>
                 </div>
             </div>
-    
+
     </div>
 
      <div class="well">
-       <ul class="nav">
+       <ul class="list-group">
        </ul>
      </div><!--/.well -->
    </div><!--/span-->
@@ -104,9 +117,10 @@ Welcome to <b>Sugar On Top</b>
         </div>
         <div class="row input-row">
              <button type='button' id='cancel' class='btn'>Cancel</button>
-             <button type='button' id='done' class='btn'>Done</button>
+             <button type='button' id='done' class='btn'>Save to History</button>
         </div>
       </div>
+
 
       <!--popup for saving food-->
       <div class='center-div popup save-popup invisible'>

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="saved.css">
+    <!-- <link rel="stylesheet" href="saved.css"> -->
+    <link rel="stylesheet" href="layout.css">
 
     <!-- Use mobile-aware viewport -->
     <meta name="viewport" content=
@@ -19,54 +20,74 @@
 
   </head>
   <body>
-    <div class='button-bar inline'>
-      <button class='btn back header-button' type='button'>
-        <i class="glyphicon glyphicon-arrow-left" ></i>
-      </button>
-        <span class='title center saved-title'>Saved Foods</span>
+
+
+      <div class="row top-buffer">
+        <div class="col-xs-4 header">
+          <button type="button" id="history" class="header-button" >
+              <!-- <span class="glyphicon glyphicon-time">   </span> -->
+               History </button>
+      </div>
+          <!-- <div class="col-xs-4 header">
+          <button type="button" id="save" class="header-button" >
+            <span class="glyphicon glyphicon-floppy-disk"></span> Save
+           </button>
+       </div> -->
+       <div class="col-xs-4 header">
+       <button type="button" id="save" class="header-button" >
+          Calculate
+        </button>
+      </div>
+           <div class="col-xs-4 header">
+           <button type="button" id="add-item" class="header-button current" >
+               <!-- <span class="glyphicon glyphicon-bookmark"></span> -->
+                Foods</button>
+        </div>
     </div>
-    <div class='list-view'>
+
+
+    <!-- <div class='button-bar inline'>
+       <button class='btn back header-button' type='button'>
+        <i class="glyphicon glyphicon-arrow-left" ></i>
+      </button> -->
+        <!-- <span class='title center saved-title'>Saved Foods</span> -->
+    <!-- </div>  -->
+    <div class='well'>
       <ul class='list-group saved-list'>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Chicken Burrito</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Beef Burrito</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Pork Burrito</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Spaghetti</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Cheese Steak</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Pepperoni Pizza</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Orange Chicken</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Cheese Burger</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Pulled Pork</h3>
         </li>
-        <li class='list-group-item food-item'>
+        <li class='list-group-item food'>
           <h3>Lasagna</h3>
         </li>
-        <!-- <li class='list-group-item food-item'>
-          <h3>Beef Burrito</h3>
-        </li>
-        <li class='list-group-item food-item'>
-          <h3>Pork Burrito</h3>
-        </li> -->
       </ul>
     </div>
-    <div class='addFood'>
-      <h3 class='center'>Add to dish!</h3>
+    <div id='addFood'>
+      <h3 class='center'>Add to Meal</h3>
     </div>
   </body>
 </html>
