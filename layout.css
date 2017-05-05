@@ -1,5 +1,8 @@
-body{
+/*body{
 
+}*/
+.toggles{
+    padding-left:10px;
 }
 
 /*body {
@@ -278,4 +281,39 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .close{
   float: left!important;
+}
+/*Used for graphing section*/
+.graph{
+  margin-left: 5vw;
+  width:100vw;
+  height:80vh;
+  text-align:center;
+}
+
+.toggles{
+  margin-left: 5vw;
+}
+.toggle-button{
+  width:33vw;
+  height: 8vh;
+  border: none;
+  outline: none;
+}
+
+#breakfast-tog-button{
+  background-color: #e74c3c;
+}
+
+#lunch-tog-button{
+  background-color: #3498db;
+}
+
+#dinner-tog-button{
+  background-color: #2ecc71;
+}
+
+.tog-active{
+  outline-color: black;
+  outline-style: solid;
+  outline-width: 1%;
 }
