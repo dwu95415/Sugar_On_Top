@@ -42,7 +42,8 @@ $(function() {
         }
       }
       $("#calculate").prop('disabled',false);
-      $('#total').text('Total: '+total + 'g')
+      $('#total').text('Total: '+total + 'g');
+      $('#carb-intake').html(total+'g of Carbs');
 
   }
 

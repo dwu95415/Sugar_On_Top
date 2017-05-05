@@ -23,24 +23,41 @@ body,html{
   top: 0;
   height: 100vh;
   width: 100vw;
+  margin: 0 auto;
 }
 
 .center-div{
-  top: 25vh;
-  height: 50vh;
-  width: 100vw;
   text-align: center;
-  padding: 5%;
   vertical-align: middle;
 }
 
 .popup{
+  padding: 0;
+  position: relative;
   opacity: 0;
-  position: absolute;
   background-color: #e3e7e8;
   top:10%;
   height: auto;
   /*left:0px;*/
+}
+
+.popup-title{
+    background-color: #3498db;
+    color: white;
+    width: auto;
+    text-align: center;
+}
+
+.popup-content{
+  text-align: center;
+  height:40vh;
+}
+
+.popup-footer{
+    background-color: #3498db;
+    color: white;
+    width: auto;
+    text-align: center;
 }
 
 label{

@@ -100,24 +100,28 @@
       </div>
       <!--popup for carbs-->
       <div class='center-div popup carb-popup invisible'>
-        <div class='row input-row'>
-          <label class='col-xs-6 input-label'>Total Carb Intake:</label>
-            <input class='input-num col-xs-4' id='total_carbs' type='number'  value='82'>
+        <div class='row popup-title'>
+          <h1>Calculate</h1>
         </div>
-        <div class='row input-row'>
-          <label class = 'col-xs-6 input-label'>Insulin to Carb Ratio: </label>
-          <input class='input-num col-xs-4' id='icr' type="number" value=3 />
+        <div class='popup-content'>
+          <div class='row input-row'>
+            <h2 id='carb-intake'>0g of Carbs</h2>
+          </div>
+          <div class='row input-row'>
+            <input class='input-num' id='icr' type="number" placeholder='Insulin to carb ratio' />
+          </div>
+          <div class='row input-row'>
+            <input class='input-num' id='bloodSugar' type="number" placeholder='Current blood sugar' />
+          </div>
+          <div class='row input-row'>
+            <label class = 'col-xs-12 insulin center invisible' id='insulin'>Inject 0 units</label>
+          </div>
         </div>
-        <div class='row input-row'>
-          <label class = 'col-xs-6 input-label'>Blood Sugar: </label>
-          <input class='input-num col-xs-4' id='bloodSugar' type="number" value=100 />
-        </div>
-        <div class='row input-row'>
-          <label class = 'col-xs-12 insulin center' id='insulin'>Inject 5 units</label>
-        </div>
-        <div class="row input-row">
-             <button type='button' id='cancel' class='btn'>Cancel</button>
-             <button type='button' id='done' class='btn'>Save to History</button>
+        <div class='row popup-footer'>
+          <div class="row input-row">
+               <button type='button' id='cancel' class='btn'>Cancel</button>
+               <button type='button' id='done' class='btn'>Save to History</button>
+          </div>
         </div>
       </div>
 
