@@ -40,6 +40,8 @@ $(function() {
           total += parseInt(gram)
           $(".well ul").append(item);
         }
+        // If input is not in - then don't
+
       }
       $('#total').text('Total: '+total + 'g')
 
