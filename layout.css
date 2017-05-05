@@ -114,11 +114,23 @@ background-color: 	#f7f7f7;
       top:0px;
   }
 
+  #add-to-meal{
+        position:absolute;
+        bottom:0px;
+        left:0px;
+          width: 100%;
+          height: 9vh;
+          /*height: 56px;*/
+          padding-left: 2% !important;
+          background: #2ecc71;
+          margin:0;
+          font-size:3vh;
+  }
   #addFood {
       background-color: #2ecc71;
       width: 100%;
-      position: absolute;
-      bottom: 0;
+      /*position: absolute;*/
+      /*bottom: 0;*/
       border-radius: 1vh;
       height: 9vh;
       text-align: center;
@@ -167,9 +179,9 @@ background-color: 	#f7f7f7;
 
 .well{
   background: white !important;
-  margin-bottom:10px !important;
-  height:450px;
-  overflow-y:auto;
+  /*margin-bottom:10px !important;*/
+  height:525px;
+  overflow-y:scroll;
 }
 
 
