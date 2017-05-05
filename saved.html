@@ -14,25 +14,16 @@
     <link rel="stylesheet" href="layout.css">
 
     <!-- Use mobile-aware viewport -->
-    <meta name="viewport" content=
-      "width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="saved.js"></script>
-
+    <meta name="viewport" content="user-scalable=0 width=device-width, initial-scale=1 maximum-scale=1.0"/>
   </head>
   <body>
-
-
-      <div class="row top-buffer">
+      <div class="row">
         <div class="col-xs-4 header">
           <button type="button" id="history" class="header-button" >
               <!-- <span class="glyphicon glyphicon-time">   </span> -->
                History </button>
       </div>
-          <!-- <div class="col-xs-4 header">
-          <button type="button" id="save" class="header-button" >
-            <span class="glyphicon glyphicon-floppy-disk"></span> Save
-           </button>
-       </div> -->
        <div class="col-xs-4 header">
        <button type="button" id="save" class="header-button" >
           Calculate
@@ -54,40 +45,56 @@
     <!-- </div>  -->
     <div class='well'>
       <ul class='list-group saved-list'>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Chicken Burrito</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
-          <h3>Beef Burrito</h3>
-        </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Pork Burrito</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Spaghetti</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Cheese Steak</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
-          <h3>Pepperoni Pizza</h3>
-        </li>
-        <li class='list-group-item food'>
-          <h3>Orange Chicken</h3>
-        </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Cheese Burger</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Pulled Pork</h3>
+      </div>
         </li>
-        <li class='list-group-item food'>
+        <li class='list-group-item'>
+            <div class='food'>
           <h3>Lasagna</h3>
+      </div>
         </li>
       </ul>
     </div>
+
+    <div class="save-footer" id="add-to-meal">
+    <div class="col-sm-offset col-sm text-center">
+      <button type="button" id="calculate" class="btn btn-lg" >
+          <div class="h3">Add To Meal</div>
+      </button>
+        </div>
+     </div>
+     <!--
+    <div class="footer">
     <div id='addFood'>
       <h3 class='center'>Add to Meal</h3>
     </div>
+</div> -->
   </body>
 </html>

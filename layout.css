@@ -55,13 +55,21 @@
 }
 
 .header-button{
-
     width:100%;
     color:black;
     height: 10vh;
     font-size: 15pt;
     /*background: #3498db;*/
 }
+
+.small-button{
+    width:100%;
+    color:black;
+    height: 4vh;
+    font-size: 10pt;
+    background-color: #27ae60;
+}
+
 .current{
 /*text-decoration: underline;*/
 /*padding:0px;
@@ -86,6 +94,7 @@ background-color: 	#f7f7f7;
 
 .search-container{
   text-align:center;
+  font-size:3em;
 }
 
 .search-bar{
@@ -102,9 +111,10 @@ background-color: 	#f7f7f7;
 }
 
  .ui-autocomplete {
-            cursor:pointer;
-            height:120px;
-            overflow-y:scroll;
+    cursor:pointer;
+    height:120px;
+    overflow-y:scroll;
+    font-size: 1.5em!important;
   }
 
   #banner-header{
@@ -112,11 +122,23 @@ background-color: 	#f7f7f7;
       top:0px;
   }
 
+  #add-to-meal{
+        position:absolute;
+        bottom:0px;
+        left:0px;
+          width: 100%;
+          height: 9vh;
+          /*height: 56px;*/
+          padding-left: 2% !important;
+          background: #2ecc71;
+          margin:0;
+          font-size:3vh;
+  }
   #addFood {
       background-color: #2ecc71;
       width: 100%;
-      position: absolute;
-      bottom: 0;
+      /*position: absolute;*/
+      /*bottom: 0;*/
       border-radius: 1vh;
       height: 9vh;
       text-align: center;
@@ -140,9 +162,23 @@ background-color: 	#f7f7f7;
   width:100%;
   margin-top: -150px; /* negative value of footer height */
   height: 150px;
+  display:block;
   /*clear:both;*/
   /*padding-top:20px;*/
 }
+
+.save-footer{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    /*margin-top: -100px; /* negative value of footer height */*/
+    height: 100px;
+    display:block;
+    /*clear:both;*/
+    /*padding-top:20px;*/
+  }
+
 .nav{
     max-height: 400px;
     overflow-y:scroll;
@@ -165,9 +201,10 @@ background-color: 	#f7f7f7;
 
 .well{
   background: white !important;
-  margin-bottom:10px !important;
-  height:450px;
-  overflow-y:auto;
+  /*margin-bottom:10px !important;*/
+  height:64vh;
+  display:block;
+  overflow-y:scroll;
 }
 
 
@@ -215,7 +252,10 @@ background-color: 	#f7f7f7;
   text-align: right;
 }
 
-
+.list-group{
+  width:98vw!important;
+  margin-left:3.5vw!important;
+}
 
 
 #search-input{
@@ -230,6 +270,8 @@ background-color: 	#f7f7f7;
 #search-input input{
     border: 0;
     box-shadow: none;
+    font-size:0.5em;
+    height:2em;
 }
 
 #search-input button{
@@ -279,8 +321,11 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   font-size:2.5em;
 }
 
-.close{
+.close-list{
   float: left!important;
+  font-size: 2em!important;
+  margin-left: -8px;
+  margin-top:-6px;
 }
 /*Used for graphing section*/
 .graph{

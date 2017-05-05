@@ -20,14 +20,14 @@ $(function() {
   });
 
   var items = [
-        {name:"rice",gram:"10",portion:"1"},
-        {name:"black beans",gram:"5",portion:"1"},
-        {name:"chicken",gram:"5",portion:"1"},
-        {name:"tortilla",gram:"10",portion:"1"},
-        {name:"cheese",gram:"10",portion:"1"},
-        {name:"salsa",gram:"10",portion:"1"},
-        {name:"lemonade",gram:"12",portion:"1"},
-        {name:"cookie",gram:"20",portion:"1"}
+        {name:"Rice",gram:"10",portion:"1"},
+        {name:"Black Beans",gram:"5",portion:"1"},
+        {name:"Chicken",gram:"5",portion:"1"},
+        {name:"Tortilla",gram:"10",portion:"1"},
+        {name:"Cheese",gram:"10",portion:"1"},
+        {name:"Salsa",gram:"10",portion:"1"},
+        {name:"Lemonade",gram:"12",portion:"1"},
+        {name:"Cookie",gram:"20",portion:"1"}
       ];
 
   var num_ingredients = 0;
@@ -35,15 +35,15 @@ $(function() {
       for (i=0; i < items.length; i++){
         var name = items[i].name;
         var gram = items[i].gram;
-        if(foodName == name){
+        if(foodName.toLowerCase() == name.toLowerCase()){
           num_ingredients +=1;
           var item =
-          '<li class=" list-group-item lf'+i+'"><span class=close aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
+          '<li class=" list-group-item lf'+i+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
           '<div class="portion-container">' +
-          '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
+          '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/size_1.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/size_2.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/size_3.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' +
           '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
           '</div></li>';
 
@@ -57,7 +57,7 @@ $(function() {
             recalculate_total();
           });
           // Delete list item listener
-          $(".close").click(function(){
+          $(".close-list").click(function(){
             $(this).parent().remove();
             recalculate_total();
           });
@@ -88,7 +88,7 @@ $(function() {
     add(query);
   });
 
-  var availableFoods = ["rice", "black beans", "chicken", "tortilla", "cheese", "salsa", "lemonade", "cookie"];
+  var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
 
   $( "#search" ).autocomplete({
       source: availableFoods,
