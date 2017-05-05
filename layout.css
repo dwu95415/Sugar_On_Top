@@ -103,9 +103,10 @@ background-color: 	#f7f7f7;
 }
 
  .ui-autocomplete {
-            cursor:pointer;
-            height:120px;
-            overflow-y:scroll;
+    cursor:pointer;
+    height:120px;
+    overflow-y:scroll;
+    font-size: 1.5em!important;
   }
 
   #banner-header{
@@ -226,12 +227,13 @@ background-color: 	#f7f7f7;
     background-color: #fff;
     width:86%;
     margin-left: 7%;
-    height:3em;
 }
 
 #search-input input{
     border: 0;
     box-shadow: none;
+    font-size:0.5em;
+    height:2em;
 }
 
 #search-input button{
