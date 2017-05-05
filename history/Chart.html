@@ -9,9 +9,14 @@
     <script src=
   "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/css/mdb.min.css" />
+  <!--Flot Chart graphing-->
+  <script src=
+  "flot/jquery.flot.js"></script>
+  <script src="flot/jquery.flot.time.js"></script>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/js/mdb.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/css/mdb.min.css" />
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/js/mdb.min.js"></script> -->
 
   <script src='Scripts/historyCanvas.js'></script>
 
@@ -24,7 +29,7 @@
         <i class="glyphicon glyphicon-arrow-left" ></i>
       </button>
     </div>
-  </div><!--/span-->
+  </div></span-->
   <div class="row" id=banner-header style="position:relative">
     <div class="col-xs-4 header">
       <button type="button" id="history" class="header-button current" >
@@ -51,13 +56,16 @@
   <div class ="row">
 <!-- <div class="col-xs-12"> -->
       <!-- Wrapper for slides -->
-      <div class="chart-inner">
-        <div class="graph">
-          <canvas id="bsGraph" height=”100″></canvas>
-        </div>
-      </div><!-- End Carousel -->
+      <div class='graph'>
+        <div id="flot-placeholder" style="height:100%;"></div>
+      </div>
   <!-- </div> -->
 
+  </div>
+  <div class='row toggles'>
+    <button type='button' id='breakfast-button' class='toggle-button'>Breakfast</button>
+    <button type='button' id='lunch-button' class='toggle-button'>Lunch</button>
+    <button type='button' id='dinner-button' class='toggle-button'>Dinner</button>
   </div>
 </body>
 </html>

@@ -252,3 +252,19 @@ background-color: 	#f7f7f7;
 #search-input .glyphicon-search{
     font-size: 23px;
 }
+
+/*Used for graphing section*/
+.graph{
+  margin-left: 5vw;
+  width:100vw;
+  height:80vh;
+  text-align:center;
+}
+
+.toggles{
+  margin-left: 5vw;
+}
+.toggle-button{
+  width:33vw;
+  height: 8vh;
+}

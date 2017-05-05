@@ -195,66 +195,144 @@
 //
 //
 // } ();
+//
+// $(document).on('click','#save',function(){
+//     window.location = "../index.html";
+//
+// });
+//
+// $(function () {
+//     var data = {
+//     labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+//     datasets: [
+//         {
+//             label: "Breakfast",
+//             fillColor: "rgba(52, 152, 219,0)",
+//             strokeColor: "rgba(52, 152, 219,1.0)",
+//             pointColor: "rgba(52, 152, 219,1.0)",
+//             pointStrokeColor: "#fff",
+//             pointHighlightFill: "#fff",
+//             pointHighlightStroke: "rgba(52, 152, 219,1.0)",
+//             borderWidth: 10,
+//             data: [108,124,176,130,98,70,80]
+//         },
+//         {
+//             label: "Lunch",
+//             fillColor: "rgba(231, 76, 60,0)",
+//             strokeColor: "rgba(231, 76, 60,1.0)",
+//             pointColor: "rgba(231, 76, 60,1.0)",
+//             pointStrokeColor: "#fff",
+//             pointHighlightFill: "#fff",
+//             pointHighlightStroke: "rgba(231, 76, 60,1.0)",
+//             borderWidth: 10,
+//             data: [97,76,65,215,124,190,134]
+//         },
+//         {
+//             label: "Dinner",
+//             fillColor: "rgba(46, 204, 113,0)",
+//             strokeColor: "rgba(46, 204, 113,1.0)",
+//             pointColor: "rgba(46, 204, 113,1.0)",
+//             pointStrokeColor: "#fff",
+//             pointHighlightFill: "#fff",
+//             pointHighlightStroke: "rgba(46, 204, 113,1.0)",
+//             borderWidth: 10,
+//             data: [120,90,100,104,130,125,175]
+//         }
+//
+//         ]
+//     };
+//
+//     var option = {
+//     responsive: true,
+//     maintainAspectRatio: false,
+//     elements: {
+//       line: {
+//         borderWidth: 50
+//       }
+//     }
+//     };
+//     //Chart.defaults.global.elements.line.borderWidth = 5;
+//
+//     console.log("HERE")
+//     // Get the context of the canvas element we want to select
+//     var ctx = document.getElementById("bsGraph").getContext('2d');
+//     var myLineChart = new Chart(ctx).Line(data, option); //'Line' defines type of the chart.
+// });
 
-$(document).on('click','#save',function(){
-    window.location = "../index.html";
 
-});
+var breakfast_data = [//[day, unit]
+  [1,123],
+  [2,97],
+  [3,104],
+  [4,110],
+  [5,220],
+  [6,121],
+  [7,100]
+];
 
-$(function () {
-    var data = {
-    labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-    datasets: [
-        {
-            label: "Breakfast",
-            fillColor: "rgba(52, 152, 219,0)",
-            strokeColor: "rgba(52, 152, 219,1.0)",
-            pointColor: "rgba(52, 152, 219,1.0)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(52, 152, 219,1.0)",
-            borderWidth: 10,
-            data: [108,124,176,130,98,70,80]
-        },
-        {
-            label: "Lunch",
-            fillColor: "rgba(231, 76, 60,0)",
-            strokeColor: "rgba(231, 76, 60,1.0)",
-            pointColor: "rgba(231, 76, 60,1.0)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(231, 76, 60,1.0)",
-            borderWidth: 10,
-            data: [97,76,65,215,124,190,134]
-        },
-        {
-            label: "Dinner",
-            fillColor: "rgba(46, 204, 113,0)",
-            strokeColor: "rgba(46, 204, 113,1.0)",
-            pointColor: "rgba(46, 204, 113,1.0)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(46, 204, 113,1.0)",
-            borderWidth: 10,
-            data: [120,90,100,104,130,125,175]
-        }
+var lunch_data = [//[day, unit]
+  [1,140],
+  [2,150],
+  [3,147],
+  [4,161],
+  [5,125],
+  [6,63],
+  [7,145]
+];
 
-        ]
-    };
+var dinner_data = [//[day, unit]
+  [1,75],
+  [2,103],
+  [3,87],
+  [4,94],
+  [5,101],
+  [6,145],
+  [7,99]
+];
 
-    var option = {
-    responsive: true,
-    maintainAspectRatio: false,
-    elements: {
-      line: {
-        borderWidth: 50
-      }
-    }
-    };
-    //Chart.defaults.global.elements.line.borderWidth = 5;
+var dataset = [
+    { label: "Breakfast", data: breakfast_data },
+    { label: "Lunch", data: lunch_data },
+    { label: "Dinner", data: dinner_data}
+];
 
-    console.log("HERE")
-    // Get the context of the canvas element we want to select
-    var ctx = document.getElementById("bsGraph").getContext('2d');
-    var myLineChart = new Chart(ctx).Line(data, option); //'Line' defines type of the chart.
-});
+var options = {
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 10
+                },
+                points: {
+                    radius: 10,
+                    fill: true,
+                    show: true
+                }
+            },
+            xaxis: {
+                mode: "time",
+                tickSize: [1, "day"],
+                tickLength: 0,
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Verdana, Arial',
+                axisLabelPadding: 10
+            },
+            yaxes: {},
+            legend: {
+                noColumns: 0,
+                labelBoxBorderColor: "#000000",
+                position: "nw"
+            },
+            grid: {
+                hoverable: true,
+                borderWidth: 2,
+                borderColor: "#633200",
+                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
+            },
+            colors: ["#FF0000", "#0022FF"]
+        };
+
+        $(document).ready(function () {
+            $.plot($("#flot-placeholder"), dataset, options);
+            //$("#flot-placeholder").UseTooltip();
+        });
