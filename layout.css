@@ -267,4 +267,24 @@ background-color: 	#f7f7f7;
 .toggle-button{
   width:33vw;
   height: 8vh;
+  border: none;
+  outline: none;
+}
+
+#breakfast-tog-button{
+  background-color: #e74c3c;
+}
+
+#lunch-tog-button{
+  background-color: #3498db;
+}
+
+#dinner-tog-button{
+  background-color: #2ecc71;
+}
+
+.active{
+  outline-color: black;
+  outline-style: solid;
+  outline-width: 1%;
 }

@@ -259,7 +259,7 @@
 //     var myLineChart = new Chart(ctx).Line(data, option); //'Line' defines type of the chart.
 // });
 
-
+var plot_graph = function(){
 var breakfast_data = [//[day, unit]
   [1,123],
   [2,97],
@@ -289,12 +289,24 @@ var dinner_data = [//[day, unit]
   [6,145],
   [7,99]
 ];
+var dataset = [];
+var color_order = [];
+if($('#breakfast-tog-button').hasClass('active'))
+{
+  dataset.push({ label: "Breakfast", data: breakfast_data });
+  color_order.push("#e74c3c");
+}
+if($('#lunch-tog-button').hasClass('active'))
+{
+  dataset.push({ label: "Lunch", data: lunch_data });
+  color_order.push("#3498db");
+}
+if($('#dinner-tog-button').hasClass('active'))
+{
+  dataset.push({ label: "Dinner", data: dinner_data});
+  color_order.push("#2ecc71");
+}
 
-var dataset = [
-    { label: "Breakfast", data: breakfast_data },
-    { label: "Lunch", data: lunch_data },
-    { label: "Dinner", data: dinner_data}
-];
 
 var options = {
             series: {
@@ -329,10 +341,20 @@ var options = {
                 borderColor: "#633200",
                 backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
             },
-            colors: ["#FF0000", "#0022FF"]
+            colors: color_order
         };
 
+        $.plot($("#flot-placeholder"), dataset, options);
+}
         $(document).ready(function () {
-            $.plot($("#flot-placeholder"), dataset, options);
-            //$("#flot-placeholder").UseTooltip();
+            plot_graph();
         });
+
+      $(document).on('click','.toggle-button',function(){
+          if($(this).hasClass('active')){
+            $(this).removeClass('active');
+          } else {
+            $(this).addClass('active');
+          }
+          plot_graph();
+      });
