@@ -358,3 +358,17 @@ var options = {
           }
           plot_graph();
       });
+
+      $(document).on('click','#save',function(){
+          window.location = "../index.html";
+
+      });
+
+      $(document).on('click','#add-item',function(){
+          window.location = "../saved.html";
+
+      });
+        // $(document).on('click','#save',function(){
+        //     window.location = "index.html";
+        //
+        // });
