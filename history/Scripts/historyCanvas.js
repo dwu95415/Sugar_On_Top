@@ -291,17 +291,17 @@ var dinner_data = [//[day, unit]
 ];
 var dataset = [];
 var color_order = [];
-if($('#breakfast-tog-button').hasClass('active'))
+if($('#breakfast-tog-button').hasClass('tog-active'))
 {
   dataset.push({ label: "Breakfast", data: breakfast_data });
   color_order.push("#e74c3c");
 }
-if($('#lunch-tog-button').hasClass('active'))
+if($('#lunch-tog-button').hasClass('tog-active'))
 {
   dataset.push({ label: "Lunch", data: lunch_data });
   color_order.push("#3498db");
 }
-if($('#dinner-tog-button').hasClass('active'))
+if($('#dinner-tog-button').hasClass('tog-active'))
 {
   dataset.push({ label: "Dinner", data: dinner_data});
   color_order.push("#2ecc71");
@@ -351,10 +351,10 @@ var options = {
         });
 
       $(document).on('click','.toggle-button',function(){
-          if($(this).hasClass('active')){
-            $(this).removeClass('active');
+          if($(this).hasClass('tog-active')){
+            $(this).removeClass('tog-active');
           } else {
-            $(this).addClass('active');
+            $(this).addClass('tog-active');
           }
           plot_graph();
       });

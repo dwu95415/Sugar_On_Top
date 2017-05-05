@@ -283,7 +283,7 @@ background-color: 	#f7f7f7;
   background-color: #2ecc71;
 }
 
-.active{
+.tog-active{
   outline-color: black;
   outline-style: solid;
   outline-width: 1%;
