@@ -5,6 +5,11 @@ $(document).on('click','#save',function(){
     window.location = "index.html";
 
 });
+$(document).on('click','#history',function(){
+    window.location = "history/Chart.html"
+
+});
+
     // $('#save').click(function(){
     //
     //
