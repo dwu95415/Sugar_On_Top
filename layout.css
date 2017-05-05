@@ -252,7 +252,10 @@ background-color: 	#f7f7f7;
   text-align: right;
 }
 
-
+.list-group{
+  width:98vw!important;
+  margin-left:3.5vw!important;
+}
 
 
 #search-input{
