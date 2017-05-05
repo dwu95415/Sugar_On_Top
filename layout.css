@@ -55,13 +55,21 @@
 }
 
 .header-button{
-
     width:100%;
     color:black;
     height: 10vh;
     font-size: 15pt;
     /*background: #3498db;*/
 }
+
+.small-button{
+    width:100%;
+    color:black;
+    height: 4vh;
+    font-size: 10pt;
+    background-color: #27ae60;
+}
+
 .current{
 /*text-decoration: underline;*/
 /*padding:0px;
@@ -158,6 +166,19 @@ background-color: 	#f7f7f7;
   /*clear:both;*/
   /*padding-top:20px;*/
 }
+
+.save-footer{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    /*margin-top: -100px; /* negative value of footer height */*/
+    height: 100px;
+    display:block;
+    /*clear:both;*/
+    /*padding-top:20px;*/
+  }
+
 .nav{
     max-height: 400px;
     overflow-y:scroll;
