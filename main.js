@@ -38,12 +38,12 @@ $(function() {
         if(foodName == name){
           num_ingredients +=1;
           var item =
-          '<li class=" list-group-item lf'+i+'"><span class=close aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
+          '<li class=" list-group-item lf'+i+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
           '<div class="portion-container">' +
-          '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/Icon-Placeholder.png"></label>' + 
+          '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/size_1.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/size_2.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/size_3.png"></label>' +
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' + 
           '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
           '</div></li>';
 
@@ -57,7 +57,7 @@ $(function() {
             recalculate_total();
           });
           // Delete list item listener
-          $(".close").click(function(){
+          $(".close-list").click(function(){
             $(this).parent().remove();
             recalculate_total();
           });
