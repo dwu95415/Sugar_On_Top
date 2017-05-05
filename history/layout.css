@@ -9,7 +9,6 @@
   /*margin-bottom: 10px;*/
   background: grey;
 }
-
 .header-button{
     width:100%;
     color:white;
@@ -19,7 +18,7 @@
 }
 .current{
 /*text-decoration: underline;*/
-border-bottom-color:black; 
+border-bottom-color:black;
 }
 /*
 .header-button{
