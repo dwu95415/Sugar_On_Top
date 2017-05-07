@@ -143,6 +143,7 @@ background-color: 	#f7f7f7;
       height: 9vh;
       text-align: center;
   }
+
 #calculate {
   position:absolute;
   bottom:0px;
@@ -192,7 +193,7 @@ background-color: 	#f7f7f7;
   }
 
 #saved-foods{
-    padding:0px;
+    margin: 0px;
 }
 .nav{
     max-height: 400px;
