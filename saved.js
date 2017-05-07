@@ -1,4 +1,26 @@
+$(function(){
+  savedFoods = window.localStorage.getItem("savedFoods");
+  if(savedFoods == null){
+    savedFoods =[
+        {name:"Cheeseburger",gram:"30",portion:"1"},
+        {name:"Spaghetti",gram:"40",portion:"1"}
+      ];
+  }
+  savedFoods = JSON.parse(savedFoods);
+  var numFoods = 0;
 
+  $.each(savedFoods, function(key, value){
+    var name = value.name;
+    var gram = value.gram
+    var item =
+          '<li class=" list-group-item lf'+numFoods+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+numFoods+'">'+name +'</div>'+
+          '<div class="gram-container">' +
+          '<p class="gram" id="gram'+numFoods + '">'+gram+'g</p></div>'+
+          '</div></li>';
+          numFoods +=1;
+          $(".well ul").append(item);
+  });
+});
 var selected = 0;
 
 $(document).on('click','#save',function(){

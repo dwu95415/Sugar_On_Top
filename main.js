@@ -29,18 +29,38 @@ $(function() {
         {name:"Lemonade",gram:"12",portion:"1"},
         {name:"Cookie",gram:"20",portion:"1"}
       ];
+  var savedFoods = window.localStorage.getItem("savedFoods");
+  if(savedFoods == null){
+    savedFoods =[
+        {name:"Cheeseburger",gram:"30",portion:"1"},
+        {name:"Spaghetti",gram:"40",portion:"1"}
+      ];
+  }
+  else{
+    savedFoods = JSON.parse(savedFoods);
+  }
 
   //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
   var availableFoods = [];
   $.each(items, function(key, value){
     availableFoods.push(value.name);
   });
-
+  $.each(savedFoods, function(key, value){
+    availableFoods.push(value.name);
+  });
   var num_ingredients = 0;
+
   var add = function(foodName){
-      for (i=0; i < items.length; i++){
-        var name = items[i].name;
-        var gram = items[i].gram;
+
+      for (i=0; i < items.length + savedFoods.length; i++){
+        if(i<items.length){
+          var name = items[i].name;
+          var gram = items[i].gram;
+        }
+        else{
+          var name = savedFoods[i-items.length].name;
+          var gram = savedFoods[i-items.length].gram;
+        }
         if(foodName.toLowerCase() == name.toLowerCase()){
           num_ingredients +=1;
           var item =
@@ -52,7 +72,8 @@ $(function() {
           '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' +
           '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
           '</div></li>';
-
+          $("#add-to-foods").prop('disabled',false);
+          $("#calculate").prop('disabled',false);
           $(".well ul").append(item);
           // Radio button listener
           $("input:radio").change(function(){
@@ -65,12 +86,15 @@ $(function() {
           // Delete list item listener
           $(".close-list").click(function(){
             $(this).parent().remove();
-            recalculate_total();
+            var total = recalculate_total();
+            if (total == 0){
+                $("#add-to-foods").prop('disabled',true);
+                $("#calculate").prop('disabled',true);
+            }
           });
         }
 
       }
-      $("#calculate").prop('disabled',false);
       $('#total').text('Total: '+total + 'g');
       $('#carb-intake').html(total+'g of Carbs');
       recalculate_total();
@@ -87,6 +111,7 @@ $(function() {
             }
     });
     $("#total").text('Total: '+total + 'g')
+    return total
   }
 
   $("#addFoodBtn").click(function(){
@@ -150,10 +175,11 @@ $(function() {
     //    window.location = "saved.html";
     // });
 // $("#calculate").property
+$("#add-to-foods").prop('disabled',true);
 $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
-
+      window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
       window.location = "saved.html";
 
       });

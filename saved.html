@@ -18,78 +18,37 @@
     <meta name="viewport" content="user-scalable=0 width=device-width, initial-scale=1 maximum-scale=1.0"/>
   </head>
   <body>
-      <div class="row">
-        <div class="col-xs-4 header">
-          <button type="button" id="history" class="header-button" >
-              <!-- <span class="glyphicon glyphicon-time">   </span> -->
-               History </button>
-      </div>
+      <div class="row" id="banner-header">
+          <div class="col-xs-4 header">
+          <button type="button" id="add-item" class="header-button current" >
+               Foods</button>
+       </div>
+
        <div class="col-xs-4 header">
        <button type="button" id="save" class="header-button" >
           Calculate
         </button>
       </div>
-           <div class="col-xs-4 header">
-           <button type="button" id="add-item" class="header-button current" >
-               <!-- <span class="glyphicon glyphicon-bookmark"></span> -->
-                Foods</button>
-        </div>
+      <div class="col-xs-4 header">
+        <button type="button" id="history" class="header-button" >
+            <!-- <span class="glyphicon glyphicon-time">   </span> -->
+             History </button>
     </div>
 
-
-    <!-- <div class='button-bar inline'>
-       <button class='btn back header-button' type='button'>
-        <i class="glyphicon glyphicon-arrow-left" ></i>
-      </button> -->
-        <!-- <span class='title center saved-title'>Saved Foods</span> -->
-    <!-- </div>  -->
-    <div class='well'>
-      <ul class='list-group saved-list'>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Chicken Burrito</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Pork Burrito</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Spaghetti</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Cheese Steak</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Cheese Burger</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Pulled Pork</h3>
-      </div>
-        </li>
-        <li class='list-group-item'>
-            <div class='food'>
-          <h3>Lasagna</h3>
-      </div>
-        </li>
+    <div class='row well'>
+      <ul class='list-group'>
       </ul>
     </div>
 
-    <div class="save-footer" id="add-to-meal">
-    <div class="col-sm-offset col-sm text-center">
-      <button type="button" id="calculate" class="btn btn-lg" >
+    </div>
+
+
+    <div class="footer">
+      <button type="button" id="add-to-meal" class="btn btn-lg" >
           <div class="h3">Add To Meal</div>
       </button>
-        </div>
-     </div>
+    </div>
+
      <!--
     <div class="footer">
     <div id='addFood'>
