@@ -1,19 +1,5 @@
 body,html{
-  height: 100%;
   overflow-x: hidden;
-}
-
-
-.input-row{
-  margin: 2vh;
-  padding: 1vh;
-}
-
-.input-label {
-  font-weight: bold;
-}
-
-.input-num {
 }
 
 .popup-background{
@@ -24,6 +10,7 @@ body,html{
   height: 100vh;
   width: 100vw;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .center-div{
@@ -39,32 +26,99 @@ body,html{
   height: auto;
   /*left:0px;*/
 }
-
-.popup-title{
-    background-color: #3498db;
+/*USED IN THE CALCULATE POPUP FOR STYLING*/
+.calculate-popup-title{
+    background-color: #2ecc71;
     color: white;
     width: auto;
-}
-#popup-title-text{
-  text-align: center;
-}
-.popup-content{
-  text-align: center;
-  height:40vh;
+    height: 12%;
 }
 
-.popup-footer{
-    background-color: #3498db;
+#calculate-close {
+  left: 10vw;
+}
+#calculate-close h1{
+  font-size: 5vh;
+  padding: 0px;
+  margin: 0;
+  margin-left: 7vw;
+}
+#calculate-popup-title-text{
+  text-align: center;
+}
+#calculate-popup-title-text h1{
+  margin-top: 0;
+}
+.calculate-popup-content{
+  text-align: center;
+  height:40%;
+}
+
+.calculate-popup-footer{
+  position: relative;
+    background-color: #2ecc71;
     color: white;
     width: auto;
-    text-align: right;
+    height: 7%;
 }
 
-label{
+/*USED IN SAVE FOODS POPUP FOR STYLING*/
+.saved-popup-title{
+    background-color: #2ecc71;
+    color: white;
+    width: auto;
+    height: 12%;
+}
+
+#saved-close {
+  left: 10vw;
+}
+#saved-close h1{
+  font-size: 5vh;
+  padding: 0px;
+  margin: 0;
+  margin-left: 7vw;
+}
+#saved-popup-title-text{
+  text-align: center;
+}
+#saved-popup-title-text h1{
+  margin-top: 0;
+}
+.saved-popup-content{
+  text-align: center;
+  height:40%;
+}
+
+.saved-popup-footer{
+  position: relative;
+    background-color: #2ecc71;
+    color: white;
+    width: auto;
+    height: 7%;
+}
+
+#save-to-foods {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  border-left: 6px solid white;
   font-size: 3vh;
-  /*text-align: justify;*/
 }
 
+#save-to-foods:focus,:active{
+  background-color: #2980b9;
+  border-left: 6px solid white;
+  border: none;
+}
+/*GENERAL STYILNG*/
 .visible{
   visibility: visible;
   display:block;
@@ -75,28 +129,51 @@ label{
   display:none;
 }
 
-#cancel{
-  left: 10vw;
-  background-color: #e74c3c;
+.btn {
+  margin: 1vw;
+}
+
+#save-to-history {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+
+  background-color: #3498db;
+  color: white;
   text-align: center;
+  border-left: 6px solid white;
+  font-size: 3vh;
 }
 
-#done{
-  position: relative;
-  background-color: #2ecc71;
-  right: 1vw;
+#save-to-history:focus,:active{
+  background-color: #2980b9;
+  border-left: 6px solid white;
+  border: none;
 }
 
-#done-save{
-  position: relative;
-  background-color: #2ecc71;
-  right: 1vw;
+.input-num {
+  width: 40vw;
+  font-size: 4vh;
+  text-align: right;
 }
 
-.insulin {
+.input-label{
+  font-size: 4vh;
+  font-weight: normal;
+}
+
+.carb-intake {
   font-size: 4vh;
 }
 
-.btn {
-  margin: 1vw;
+.insulin {
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+#calculate-popup-title-text{
+  font-size: 5vh;
 }

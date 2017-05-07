@@ -86,29 +86,34 @@
       </div>
       <!--popup for carbs-->
       <div class='center-div popup carb-popup invisible'>
-        <div class='row popup-title'>
+        <div class='row calculate-popup-title'>
           <!-- <h1><span id='cancel' aria-hidden="true">&times;</span><h1> -->
-          <div id='popup-title-text'>
+          <div id='calculate-close'>
+            <h1>&times;</h1>
+          </div>
+          <div id='calculate-popup-title-text'>
             <h1>Calculate</h1>
           </div>
         </div>
-        <div class='popup-content'>
+        <div class='calculate-popup-content'>
           <div class='row input-row'>
             <h2 id='carb-intake'>0g of Carbs</h2>
           </div>
-          <div class='row input-row'>
-            <input class='input-num' id='icr' type="number" placeholder='Insulin to carb ratio' />
+          <div class='row input-row form-group form-inline'>
+              <input class='input-num' id='icr' type="number" placeholder='Carb ratio  ' />
+              <label class='input-label'>g/unit</label>
           </div>
-          <div class='row input-row'>
-            <input class='input-num' id='bloodSugar' type="number" placeholder='Current blood sugar' />
+          <div class='row input-row form-group form-inline'>
+              <input class='input-num' id='bloodSugar' type="number" placeholder='Blood sugar' />
+              <label class='input-label'>mM/L</label>
           </div>
           <div class='row input-row'>
             <label class = 'col-xs-12 insulin center invisible' id='insulin'>Inject 0 units</label>
           </div>
         </div>
-        <div class='row popup-footer'>
+        <div class='row calculate-popup-footer'>
           <div class="row input-row">
-               <button type='button' id='done' class='btn'>Save to History</button>
+               <button type='button' id='save-to-history' class='btn'>Save to History</button>
           </div>
         </div>
       </div>
@@ -116,18 +121,25 @@
 
       <!--popup for saving food-->
       <div class='center-div popup save-popup invisible'>
-        <div class='form-group row'>
-          <br>
-          <br>
-          <br>
-          <label class='col-xs-6 col-form-label'>Food Name: </label>
-          <div class='col-xs-6'>
-            <input class='form-control' id='food-name' type='text' name='food-name'>
+        <div class='row popup-title'>
+          <!-- <h1><span id='cancel' aria-hidden="true">&times;</span><h1> -->
+          <div id='saved-close'>
+            <h1>&times;</h1>
+          </div>
+          <div id='saved-popup-title-text'>
+            <h1>Save Food</h1>
           </div>
         </div>
-        <div class="row input-row">
-             <button type='button' id='cancel' class='btn'>Cancel</button>
-             <button type='button' id='done-save' class='btn'>Save</button>
+        <div class='saved-popup-content'>
+          <div class='row input-row form-group form-inline'>
+            <label class='input-label'>g/unit</label>
+            <input class='input-num' id='name' type="text" placeholder='Chicken Burrito'/>
+          </div>
+        </div>
+        <div class='row saved-popup-footer'>
+          <div class="row input-row">
+               <button type='button' id='save-to-foods' class='btn'>Save to Foods</button>
+          </div>
         </div>
       </div>
 

@@ -6,7 +6,8 @@ var updateInsulin = function()
   if(icr != 0 && bloodSugar != 0)
   {
     icr = $('#icr').val();
-    carbs = $('#carb-intake').html()
+    carbs = $('#carb-intake').html();
+
     g_loc = carbs.indexOf('g');
     totalCarbs = parseInt(carbs.substring(0,g_loc));
     bloodSugar = $('#bloodSugar').val();
@@ -17,7 +18,7 @@ var updateInsulin = function()
     var ratio = Math.round(totalCarbs/icr);
     var extra = 0;
     if(bloodSugar >= 150)
-      Math.round(extra = (bloodSugar-100)/50);
+      extra = Math.floor((bloodSugar-100)/50);
     var out = ratio + extra;
     $('#insulin').html('Inject '+ out +' units');
   }
@@ -68,6 +69,19 @@ $(document).on('click','#calculate',function(){
   add();
 
 });
+$(document).on('click','#add-to-foods',function(){
+
+  $('.popup-background').animate({
+    opacity: .8
+  }, 250,function(){
+  });
+  $('.save-popup').animate({
+    opacity: 1
+  }, 250);
+  $('.save-popup').css('z-index',1);
+  add();
+
+});
 
 // $(document).on('click','#save',function(){
 //   // console.log('click');
@@ -84,7 +98,8 @@ $(document).on('click','#calculate',function(){
 //
 // });
 
-$(document).on('click','#done',function(){
+//Used on the saved popup
+$(document).on('click','#saved-close',function(){
   // console.log('click');
   $('.popup-background').animate({
     opacity: 0
@@ -100,7 +115,7 @@ $(document).on('click','#done',function(){
 
 });
 
-$(document).on('click','#done-save',function(){
+$(document).on('click','#save-to-foods',function(){
   // console.log('click');
   $('.popup-background').animate({
     opacity: 0
@@ -113,11 +128,27 @@ $(document).on('click','#done-save',function(){
     remove();
     $('.popup').css('z-index',-1);
   });
-  // saved.addNewFood('hi');
 
 });
 
-$(document).on('click','#cancel',function(){
+//Used on the calculate popup
+$(document).on('click','#calculate-close',function(){
+  // console.log('click');
+  $('.popup-background').animate({
+    opacity: 0
+  }, 250,function(){
+    // console.log('done');
+  });
+  $('.popup').animate({
+    opacity: 0
+  }, 250,function(){
+    remove();
+    $('.popup').css('z-index',-1);
+  });
+
+});
+
+$(document).on('click','#save-to-history',function(){
   // console.log('click');
   $('.popup-background').animate({
     opacity: 0
@@ -145,4 +176,10 @@ var add = function(){
   $('.popup-background').addClass('visible');
   $('.popup').removeClass('invisible');
   $('.popup').addClass('visible');
+  total_text = $('#total').html();
+  g_loc = total_text.indexOf('g');
+  col_loc = total_text.indexOf(' ');
+  totalVal = parseInt(total_text.substring(col_loc,g_loc));
+  $('#carb-intake').html(totalVal + 'g of Carbs');
+  console.log(totalVal);
 }
