@@ -49,7 +49,7 @@ $(function() {
           '<label><input type="radio" name="portion-size' + num_ingredients +'" value="' + gram +'" checked="checked" /><img src="icons/size_1.png"></label>' +
           '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 2 * gram +'" /><img src="icons/size_2.png"></label>' +
           '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 3 * gram +'" /><img src="icons/size_3.png"></label>' +
-          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' + 
+          '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' +
           '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
           '</div></li>';
 
@@ -71,6 +71,8 @@ $(function() {
 
       }
       $("#calculate").prop('disabled',false);
+      $('#total').text('Total: '+total + 'g');
+      $('#carb-intake').html(total+'g of Carbs');
       recalculate_total();
       //$('#total').text('Total: '+total + 'g')
 

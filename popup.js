@@ -3,10 +3,12 @@ icr = 0;
 bloodSugar = 0;
 var updateInsulin = function()
 {
-  if(icr != 0)
+  if(icr != 0 && bloodSugar != 0)
   {
     icr = $('#icr').val();
-    totalCarbs = 82;
+    carbs = $('#carb-intake').html()
+    g_loc = carbs.indexOf('g');
+    totalCarbs = parseInt(carbs.substring(0,g_loc));
     bloodSugar = $('#bloodSugar').val();
     // console.log('tot'+totalCarbs);
     // console.log(icr);
@@ -20,8 +22,19 @@ var updateInsulin = function()
     $('#insulin').html('Inject '+ out +' units');
   }
   else{
+
     // console.log('noooo');
     $('#insulin').html('Inject 0 units');
+  }
+  if(($("#icr").is(":focus") || $("#bloodSugar").is(":focus"))
+      && (icr == 0 || bloodSugar == 0))
+  {
+    $('#insulin').addClass('invisible');
+    $('#insulin').removeClass('visible');
+  }
+  else{
+    $('#insulin').removeClass('invisible');
+    $('#insulin').addClass('visible');
   }
 }
 
@@ -37,19 +50,16 @@ $(document).on('keyup', function(evt) {
     } else if(focusedElem.id == 'bloodSugar'){
       bloodSugar = $(focusedElem).val();
     }
-    console.log(totalCarbs);
-    console.log(icr);
-    console.log(bloodSugar);
+
     updateInsulin();
   }
 });
 
 $(document).on('click','#calculate',function(){
-  console.log('click');
+
   $('.popup-background').animate({
     opacity: .8
   }, 250,function(){
-    console.log('done');
   });
   $('.carb-popup').animate({
     opacity: 1
