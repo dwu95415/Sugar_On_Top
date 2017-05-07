@@ -139,7 +139,7 @@ background-color: 	#f7f7f7;
       width: 100%;
       /*position: absolute;*/
       /*bottom: 0;*/
-      border-radius: 1vh;
+      /*border-radius: 1vh;*/
       height: 9vh;
       text-align: center;
   }
@@ -154,7 +154,7 @@ background-color: 	#f7f7f7;
     padding-left: 2% !important;
     background: #2ecc71;
     margin:0;
-    font-size:3vh;
+    /*font-size:3vh;*/
 }
 #add-to-foods{
     position:absolute;
@@ -251,7 +251,7 @@ background-color: 	#f7f7f7;
 
 .h3 {
   color: white;
-  font-size: 5vh;
+  font-size: 3vh;
   padding: .5vh;
 }
 
