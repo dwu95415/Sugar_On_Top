@@ -29,18 +29,32 @@ $(function() {
         {name:"Lemonade",gram:"12",portion:"1"},
         {name:"Cookie",gram:"20",portion:"1"}
       ];
+  var savedFoods = [
+        {name:"Cheeseburger",gram:"30",portion:"1"},
+        {name:"Spaghetti",gram:"40",portion:"1"}
+      ];
 
   //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
   var availableFoods = [];
   $.each(items, function(key, value){
     availableFoods.push(value.name);
   });
-
+  $.each(savedFoods, function(key, value){
+    availableFoods.push(value.name);
+  });
   var num_ingredients = 0;
+
   var add = function(foodName){
-      for (i=0; i < items.length; i++){
-        var name = items[i].name;
-        var gram = items[i].gram;
+
+      for (i=0; i < items.length + savedFoods.length; i++){
+        if(i<items.length){
+          var name = items[i].name;
+          var gram = items[i].gram;
+        }
+        else{
+          var name = savedFoods[i-items.length].name;
+          var gram = savedFoods[i-items.length].gram;
+        }
         if(foodName.toLowerCase() == name.toLowerCase()){
           num_ingredients +=1;
           var item =
