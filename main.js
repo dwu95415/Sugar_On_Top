@@ -72,7 +72,8 @@ $(function() {
           '<label> <input type="radio" name="portion-size' + num_ingredients +'" value="' + 4 * gram +'" /><img src="icons/size_4.png"></label>' +
           '<p class="gram" id="gram'+num_ingredients+'">'+gram+'g</p></div>'+
           '</div></li>';
-
+          $("#add-to-foods").prop('disabled',false);
+          $("#calculate").prop('disabled',false);
           $(".well ul").append(item);
           // Radio button listener
           $("input:radio").change(function(){
@@ -85,13 +86,15 @@ $(function() {
           // Delete list item listener
           $(".close-list").click(function(){
             $(this).parent().remove();
-            recalculate_total();
+            var total = recalculate_total();
+            if (total == 0){
+                $("#add-to-foods").prop('disabled',true);
+                $("#calculate").prop('disabled',true);
+            }
           });
         }
 
       }
-          $("#add-to-foods").prop('disabled',false);
-          $("#calculate").prop('disabled',false);
       $('#total').text('Total: '+total + 'g');
       $('#carb-intake').html(total+'g of Carbs');
       recalculate_total();
@@ -108,6 +111,7 @@ $(function() {
             }
     });
     $("#total").text('Total: '+total + 'g')
+    return total
   }
 
   $("#addFoodBtn").click(function(){
