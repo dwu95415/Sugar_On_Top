@@ -23,7 +23,6 @@ body,html{
   opacity: 0;
   background-color: #e3e7e8;
   top:10%;
-  height: auto;
   /*left:0px;*/
 }
 /*USED IN THE CALCULATE POPUP FOR STYLING*/
@@ -64,7 +63,7 @@ body,html{
 
 /*USED IN SAVE FOODS POPUP FOR STYLING*/
 .saved-popup-title{
-    background-color: #2ecc71;
+    background-color: #3498db;
     color: white;
     width: auto;
     height: 12%;
@@ -87,12 +86,12 @@ body,html{
 }
 .saved-popup-content{
   text-align: center;
-  height:40%;
+  height:25%;
 }
 
 .saved-popup-footer{
   position: relative;
-    background-color: #2ecc71;
+    background-color: #3498db;
     color: white;
     width: auto;
     height: 7%;
@@ -106,7 +105,7 @@ body,html{
   height: 100%;
   width: 50%;
 
-  background-color: #3498db;
+  background-color: #2ecc71;
   color: white;
   text-align: center;
   border-left: 6px solid white;

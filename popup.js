@@ -1,6 +1,11 @@
 totalCarbs = 0;
 icr = 0;
 bloodSugar = 0;
+$(document).ready(function() {
+  $('#save-to-history').prop('disabled',true);
+  $('#save-to-foods').prop('disabled',true);
+});
+
 var updateInsulin = function()
 {
   if(icr != 0 && bloodSugar != 0)
@@ -32,10 +37,12 @@ var updateInsulin = function()
   {
     $('#insulin').addClass('invisible');
     $('#insulin').removeClass('visible');
+    $('#save-to-history').prop('disabled',true);
   }
   else{
     $('#insulin').removeClass('invisible');
     $('#insulin').addClass('visible');
+    $('#save-to-history').prop('disabled',false);
   }
 }
 
