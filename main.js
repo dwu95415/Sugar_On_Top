@@ -29,10 +29,16 @@ $(function() {
         {name:"Lemonade",gram:"12",portion:"1"},
         {name:"Cookie",gram:"20",portion:"1"}
       ];
-  var savedFoods = [
+  var savedFoods = window.localStorage.getItem("savedFoods");
+  if(savedFoods == null){
+    savedFoods =[
         {name:"Cheeseburger",gram:"30",portion:"1"},
         {name:"Spaghetti",gram:"40",portion:"1"}
       ];
+  }
+  else{
+    savedFoods = JSON.parse(savedFoods);
+  }
 
   //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
   var availableFoods = [];
