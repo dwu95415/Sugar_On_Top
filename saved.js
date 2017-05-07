@@ -13,23 +13,34 @@ $(function(){
     var name = value.name;
     var gram = value.gram
     var item =
-          '<li class=" list-group-item lf'+numFoods+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+numFoods+'">'+name +'</div>'+
+          '<li class=" list-group-item lf'+numFoods+'"><span id="'+name+'" class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+numFoods+'">'+name +'</div>'+
           '<div class="gram-container">' +
           '<p class="gram" id="gram'+numFoods + '">'+gram+'g</p></div>'+
           '</div></li>';
           numFoods +=1;
           $(".well ul").append(item);
   });
+
+  $(".close-list").click(function(){
+            var name = $(this).attr('id');
+            $(this).parent().remove();
+            savedFoods = savedFoods.filter(function(el) {
+                  console.log(el.name);
+                  console.log(name);
+                  return el.name !== name;
+              });
+  });
+
 });
 var selected = 0;
 
 $(document).on('click','#save',function(){
     window.location = "index.html";
-
+    window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
 });
 $(document).on('click','#history',function(){
     window.location = "history/Chart.html"
-
+    window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
 });
 
     // $('#save').click(function(){
