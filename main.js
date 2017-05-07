@@ -185,6 +185,7 @@ $("#calculate").prop('disabled',true);
       });
 
    $('#history').click(function(){
+      window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
       window.location = "history/Chart.html"
     });
 
