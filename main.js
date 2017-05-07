@@ -40,6 +40,12 @@ $(function() {
     savedFoods = JSON.parse(savedFoods);
   }
 
+
+  $("#save-to-foods").click(function(){
+    var foodName = $('#save-food-name').val();
+    var newItem = {name: foodName, gram: "" + recalculate_total(), portion:"1"};
+    savedFoods.push(newItem);
+  });
   //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
   var availableFoods = [];
   $.each(items, function(key, value){
@@ -175,6 +181,7 @@ $(function() {
     //    window.location = "saved.html";
     // });
 // $("#calculate").property
+
 $("#add-to-foods").prop('disabled',true);
 $("#calculate").prop('disabled',true);
 
