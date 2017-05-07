@@ -84,7 +84,8 @@ $(function() {
         }
 
       }
-      $("#calculate").prop('disabled',false);
+          $("#add-to-foods").prop('disabled',false);
+          $("#calculate").prop('disabled',false);
       $('#total').text('Total: '+total + 'g');
       $('#carb-intake').html(total+'g of Carbs');
       recalculate_total();
@@ -164,6 +165,7 @@ $(function() {
     //    window.location = "saved.html";
     // });
 // $("#calculate").property
+$("#add-to-foods").prop('disabled',true);
 $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
