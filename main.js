@@ -30,6 +30,12 @@ $(function() {
         {name:"Cookie",gram:"20",portion:"1"}
       ];
 
+  //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
+  var availableFoods = [];
+  $.each(items, function(key, value){
+    availableFoods.push(value.name);
+  });
+
   var num_ingredients = 0;
   var add = function(foodName){
       for (i=0; i < items.length; i++){
@@ -88,7 +94,6 @@ $(function() {
     add(query);
   });
 
-  var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
 
   $( "#search" ).autocomplete({
       source: availableFoods,
