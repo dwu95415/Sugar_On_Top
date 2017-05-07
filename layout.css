@@ -328,9 +328,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   margin-top:-6px;
 }
 /*Used for graphing section*/
+.historyBody {
+  overflow-x: hidden;
+}
 .graph{
   margin-left: 5vw;
-  width:100vw;
+  width:95vw;
   height:80vh;
   text-align:center;
 }
