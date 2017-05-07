@@ -167,7 +167,7 @@ $(function() {
 $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
-
+      window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
       window.location = "saved.html";
 
       });

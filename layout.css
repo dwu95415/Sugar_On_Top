@@ -302,7 +302,17 @@ background-color: 	#f7f7f7;
   display:inline-block;
 }
 
-label > input{ /* HIDE RADIO */
+.gram-container{
+  text-align:center;
+  height:4em;
+  float:right;
+  display:inline-block;
+}
+.gram-container p{
+  padding-top:0.4em;
+}
+
+label > input{ /* 0.4emE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */
   font-size:2em;
