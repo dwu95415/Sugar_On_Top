@@ -25,8 +25,6 @@ $(function(){
             var name = $(this).attr('id');
             $(this).parent().remove();
             savedFoods = savedFoods.filter(function(el) {
-                  console.log(el.name);
-                  console.log(name);
                   return el.name !== name;
               });
   });
