@@ -20,18 +20,24 @@ body,html{
   padding: 0;
   position: absolute;
   opacity: 0;
-  background-color: #e3e7e8;
-  top:10%;
-  width: 100%;
+  background-color: #ecf0f1;
+  top:25%;
+  left: 5%;
+  width: 90%;
   height: 50%;
+  border-radius: 10px;
   /*left:0px;*/
 }
 /*USED IN THE CALCULATE POPUP FOR STYLING*/
 .calculate-popup-title{
-    background-color: #2ecc71;
-    color: white;
-    width: auto;
+  position: relative;
+    background-color: #bdc3c7; /*#e3e7e8;*/
+    color: black;
     height: 25%;
+    width: 100%;
+    left: 4.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #calculate-close {
@@ -41,7 +47,7 @@ body,html{
   font-size: 5vh;
   padding: 0px;
   margin: 0;
-  margin-left: 7vw;
+  margin-left: 3vw;
 }
 #calculate-popup-title-text{
   text-align: center;
@@ -56,18 +62,26 @@ body,html{
 
 .calculate-popup-footer{
   position: relative;
-    background-color: #2ecc71;
-    color: white;
+    background-color: #bdc3c7;
+    color: black;
     width: auto;
     height: 14%;
+    width: 100%;
+    left: 4.5%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /*USED IN SAVE FOODS POPUP FOR STYLING*/
 .saved-popup-title{
-    background-color: #3498db;
-    color: white;
-    width: auto;
+  position: relative;
+    background-color: #bdc3c7;
+    color: black;
     height: 25%;
+    width: 100%;
+    left: 4.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #saved-close {
@@ -92,10 +106,14 @@ body,html{
 
 .saved-popup-footer{
   position: relative;
-    background-color: #3498db;
-    color: white;
+    background-color: #bdc3c7;
+    color: black;
     width: auto;
     height: 14%;
+    width: 100%;
+    left: 4.5%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #save-to-foods {
@@ -106,8 +124,8 @@ body,html{
   height: 100%;
   width: 50%;
 
-  background-color: #2ecc71;
-  color: white;
+  background-color: #3498db;
+  color: black;
   text-align: center;
   border-left: 6px solid white;
   font-size: 3vh;
@@ -141,15 +159,15 @@ body,html{
   height: 100%;
   width: 50%;
 
-  background-color: #3498db;
-  color: white;
+  background-color: #2ecc71;
+  color: black;
   text-align: center;
   border-left: 6px solid white;
   font-size: 3vh;
 }
 
 #save-to-history:focus,:active{
-  background-color: #2980b9;
+  background-color: #27ae60;
   border-left: 6px solid white;
   border: none;
 }
