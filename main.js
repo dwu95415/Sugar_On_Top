@@ -178,6 +178,7 @@ $(function() {
   $("#addFoodBtn").click(function(){
     query = $("#search").val()
     add(query);
+    $("#search").val("")
   });
 
   var foodListLength = savedFoodList.length;

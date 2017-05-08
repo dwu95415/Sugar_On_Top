@@ -236,6 +236,9 @@ var remove = function(){
   $('.popup-background').removeClass('visible');
   $('.popup').addClass('invisible');
   $('.popup').removeClass('visible');
+  $('#save-food-name').val('');
+  $('#bloodSugar').val('');
+  $('#icr').val('');
 }
 
 var add = function(){
@@ -248,5 +251,4 @@ var add = function(){
   col_loc = total_text.indexOf(' ');
   totalVal = parseInt(total_text.substring(col_loc,g_loc));
   $('#carb-intake').html(totalVal + 'g of Carbs');
-  console.log(totalVal);
 }
