@@ -258,10 +258,11 @@ background-color: 	#f7f7f7;
   margin-right: 0;
 }
 
-.h3 {
-  color: white;
-  font-size: 3vh;
+.main-button {
+  color: black;
+  font-size: 3.5vh;
   padding: .5vh;
+  font-weight: normal;
 }
 
 /*.header-button{
