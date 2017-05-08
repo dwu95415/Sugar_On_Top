@@ -28,7 +28,10 @@ var updateInsulin = function()
     if(bloodSugar >= 150)
       extra = Math.floor((bloodSugar-100)/50);
     out = ratio + extra;
-    $('#insulin').html('Inject '+ out +' units');
+    text_out = 'Inject '+ out +' unit';
+    if(out > 1)
+      text_out = text_out + 's';
+    $('#insulin').html(text_out);
   }
   else{
 
@@ -63,6 +66,15 @@ $(document).on('keyup', function(evt) {
     }
 
     updateInsulin();
+  }
+  if($(focusedElem).hasClass('input-text'))
+  {
+    value = $(focusedElem).val();
+    if(value.length > 0){
+      $('#save-to-foods').prop('disabled',false);
+    } else {
+      $('#save-to-foods').prop('disabled',true);
+    }
   }
 });
 
