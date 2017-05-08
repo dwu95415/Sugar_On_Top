@@ -91,7 +91,7 @@ body,html{
   font-size: 5vh;
   padding: 0px;
   margin: 0;
-  margin-left: 7vw;
+  margin-left: 3vw;
 }
 #saved-popup-title-text{
   text-align: center;
@@ -129,6 +129,7 @@ body,html{
   text-align: center;
   border-left: 6px solid white;
   font-size: 3vh;
+  border-bottom-right-radius: 10px;
 }
 
 #save-to-foods:focus,:active{
@@ -164,6 +165,7 @@ body,html{
   text-align: center;
   border-left: 6px solid white;
   font-size: 3vh;
+  border-bottom-right-radius: 10px;
 }
 
 #save-to-history:focus,:active{
@@ -180,7 +182,8 @@ body,html{
 
 .input-text {
   width: 40vw;
-  font-size: 4vh;
+  height: 5vh;
+  font-size: 5vh;
   text-align: left;
 }
 
