@@ -37,11 +37,6 @@ $(function() {
     localStorage.setItem('lunch', JSON.stringify(lunch_data));
     localStorage.setItem('dinner', JSON.stringify(dinner_data));
 
-    savedList = localStorage.getItem("savedList");
-    if(savedList)
-    {
-        $('.well').html(savedList);
-    }
   // A short jQuery extension to read query parameters from the URL.
   $.extend({
     getUrlVars: function() {
@@ -98,6 +93,17 @@ $(function() {
   });
   var num_ingredients = 0;
 
+  var savedFoodList = localStorage.getItem("mainFoodList");
+  if(savedFoodList)
+  {
+    savedFoodList = JSON.parse(savedFoodList);
+  }
+  else{
+    savedFoodList = [];
+  }
+  var mainFoodList = [];
+  
+
 
   var add = function(foodName){
 
@@ -111,6 +117,7 @@ $(function() {
           var gram = savedFoods[i-items.length].gram;
         }
         if(foodName.toLowerCase() == name.toLowerCase()){
+          mainFoodList.push(foodName);
           num_ingredients +=1;
           var item =
           '<li class=" list-group-item lf'+i+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
@@ -135,6 +142,11 @@ $(function() {
           // Delete list item listener
           $(".close-list").click(function(){
             $(this).parent().remove();
+            var removedName = $(this).next().html();
+            var index = mainFoodList.indexOf(search_term);    // <-- Not supported in <IE9
+            if (index !== -1) {
+                mainFoodList.splice(index, 1);
+            }
             var total = recalculate_total();
             if (total == 0){
                 $("#add-to-foods").prop('disabled',true);
@@ -167,6 +179,12 @@ $(function() {
     query = $("#search").val()
     add(query);
   });
+
+  var foodListLength = savedFoodList.length;
+  for(var j=0;j<foodListLength;j++)
+  {
+    add(savedFoodList[j]);
+  }
 
 
   var noResultsTag = "No Results Found..."
@@ -205,11 +223,6 @@ $(function() {
     ul.outerWidth(this.element.outerWidth());
   }
 
-  var url_var_add = parseInt($.getUrlVar('add'));
-  if(url_var_add==1)
-  {
-    add();
-  }
 
   $(document).on('click', function(evt)
   {
@@ -248,7 +261,7 @@ $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
-      window.localStorage.setItem("savedList",$(".well").html());
+      window.localStorage.setItem("mainFoodList", JSON.stringify(mainFoodList));
       window.location = "saved.html";
 
 
@@ -256,8 +269,8 @@ $("#calculate").prop('disabled',true);
 
    $('#history').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
-      window.location = "history/Chart.html"
-      window.localStorage.setItem("savedList",$(".well").html());
+      window.localStorage.setItem("mainFoodList", JSON.stringify(mainFoodList));
+      window.location = "history/Chart.html";
     });
 
 });
