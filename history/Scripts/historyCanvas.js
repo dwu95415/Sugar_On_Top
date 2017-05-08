@@ -1,35 +1,11 @@
 
 
 var plot_graph = function(){
-var breakfast_data = [//[day, unit]
-  [1,123],
-  [2,97],
-  [3,104],
-  [4,110],
-  [5,220],
-  [6,121],
-  [7,100]
-];
 
-var lunch_data = [//[day, unit]
-  [1,140],
-  [2,150],
-  [3,147],
-  [4,161],
-  [5,125],
-  [6,63],
-  [7,145]
-];
+var breakfast_data = JSON.parse(localStorage.getItem('breakfast'));
+var lunch_data = JSON.parse(localStorage.getItem('lunch'));
+var dinner_data = JSON.parse(localStorage.getItem('dinner'));
 
-var dinner_data = [//[day, unit]
-  [1,75],
-  [2,103],
-  [3,87],
-  [4,94],
-  [5,101],
-  [6,145],
-  [7,99]
-];
 var dataset = [];
 var color_order = [];
 if($('#breakfast-tog-button').hasClass('tog-active'))
@@ -136,6 +112,8 @@ $(document).on('click','.toggle-button',function(){
 
 
   var showTooltip = function(x, y, contents) {
+
+    if (x < $(document).width()/2){
           $('<div id="tooltip">' + contents + '</div>').css({
               position: 'absolute',
               display: 'none',
@@ -143,9 +121,25 @@ $(document).on('click','.toggle-button',function(){
               left: x + 5,
               border: '1px solid #fdd',
               padding: '2px',
-              'background-color': '#fee',
+              'background-color': 'black',
+              color: '#fff',
               opacity: 0.80
           }).appendTo("body").fadeIn(200);
+    }
+    else{
+      $('<div id="tooltip">' + contents + '</div>').css({
+              position: 'absolute',
+              display: 'none',
+              top: y - 20,
+              left: x - 200,
+              border: '1px solid #fdd',
+              padding: '2px',
+              'background-color': 'black',
+              color: '#fff',
+              opacity: 0.80
+          }).appendTo("body").fadeIn(200);
+    }
+
   }
 
   var previousPoint = null;
@@ -165,7 +159,7 @@ $(document).on('click','.toggle-button',function(){
         var x = item.datapoint[0].toFixed(2),
             y = item.datapoint[1].toFixed(2),
             //set default content for tooltip
-            content = getDate(-x) + " " + y;
+            content = "Date: " + getDate(-x) + "\n" + "Units: " +  y;
         
         // if there is a cached item object at this index use it instead
         if(clickedItems[item.dataIndex])
@@ -192,7 +186,7 @@ $(document).on('click','.toggle-button',function(){
 
 var getDate = function(index){
     var today = new Date();
-    today.setDate(today.getDate() - index);
+    today.setDate(today.getDate() - 7 - index);
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
 

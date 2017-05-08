@@ -1,6 +1,42 @@
 $(function() {
   var total = 0
 
+
+  var breakfast_data = [//[day, unit]
+      [1,123],
+      [2,97],
+      [3,104],
+      [4,110],
+      [5,220],
+      [6,121],
+    ];
+
+    var lunch_data = [//[day, unit]
+      [1,140],
+      [2,150],
+      [3,147],
+      [4,161],
+      [5,125],
+      [6,63],
+    ];
+
+    var dinner_data = [//[day, unit]
+      [1,75],
+      [2,103],
+      [3,87],
+      [4,94],
+      [5,101],
+      [6,145],
+    ];
+
+    var day = new Date();
+
+    localStorage.setItem('day',JSON.stringify(day.getDay()));
+
+    localStorage.setItem('breakfast', JSON.stringify(breakfast_data));
+    localStorage.setItem('lunch', JSON.stringify(lunch_data));
+    localStorage.setItem('dinner', JSON.stringify(dinner_data));
+
   // A short jQuery extension to read query parameters from the URL.
   $.extend({
     getUrlVars: function() {
@@ -55,6 +91,7 @@ $(function() {
     availableFoods.push(value.name);
   });
   var num_ingredients = 0;
+
 
   var add = function(foodName){
 
