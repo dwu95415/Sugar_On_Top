@@ -182,16 +182,16 @@ var updateData = function(out){
   var data;
   var date = new Date();
   var hour = date.getHours();
-  if (hour < 11 && hour > 3){
+  if (hour > 3 && hour < 11){
       data = breakfast_data;
   }
-  else if (hour > 11 && hour < 5){
+  else if (hour > 11 && hour < 17){
     data = lunch_data;
   }
   else
     data = dinner_data
   
-  if (date.length == 7 && date.getDay() != JSON.parse(localStorage.getItem('day'))){
+  if (data.length == 7 && date.getDay() != JSON.parse(localStorage.getItem('day'))){
     popData(dinner_data);
     popData(breakfast_data);
     popData(lunch_data);
