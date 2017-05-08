@@ -195,6 +195,9 @@ background-color: 	#f7f7f7;
 #saved-foods{
     margin: 0px;
 }
+#saved-list{
+
+}
 .nav{
     max-height: 400px;
     overflow-y:scroll;
@@ -223,7 +226,13 @@ background-color: 	#f7f7f7;
   overflow-y:scroll;
 }
 
-
+#save-well{
+      background: white !important;
+      /*margin-bottom:10px !important;*/
+      height:100%;
+      display:block;
+      overflow-y:scroll;
+}
 .active{
   background-color:#3498db;
   color:white;
@@ -372,6 +381,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   height: 8vh;
   border: none;
   outline: none;
+  font-size: 18px;
 }
 
 #breakfast-tog-button{
