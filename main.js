@@ -37,6 +37,11 @@ $(function() {
     localStorage.setItem('lunch', JSON.stringify(lunch_data));
     localStorage.setItem('dinner', JSON.stringify(dinner_data));
 
+    savedList = localStorage.getItem("savedList");
+    if(savedList)
+    {
+        $('.well').html(savedList);
+    }
   // A short jQuery extension to read query parameters from the URL.
   $.extend({
     getUrlVars: function() {
@@ -163,8 +168,26 @@ $(function() {
   });
 
 
+  var noResultsTag = "No Results Found..."
   $( "#search" ).autocomplete({
-      source: availableFoods,
+      //source: availableFoods,
+      source: function(request, response){
+        var results = $.ui.autocomplete.filter(availableFoods, request.term);
+            if (!results.length) {
+                results = [noResultsTag];
+            }
+            response(results);
+      },
+      select: function (event, ui) {
+            if (ui.item.label === noResultsTag) {
+                event.preventDefault();
+            }
+        },
+        focus: function (event, ui) {
+            if (ui.item.label === noResultsTag) {
+                event.preventDefault();
+            }
+        },
       scroll:true,
       minLength:0,
       messages: {
@@ -224,13 +247,16 @@ $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
+      window.localStorage.setItem("savedList",$(".well").html());
       window.location = "saved.html";
+
 
       });
 
    $('#history').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
       window.location = "history/Chart.html"
+      window.localStorage.setItem("savedList",$(".well").html());
     });
 
 });
