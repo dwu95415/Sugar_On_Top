@@ -126,8 +126,26 @@ $(function() {
   });
 
 
+  var noResultsTag = "No Results Found..."
   $( "#search" ).autocomplete({
-      source: availableFoods,
+      //source: availableFoods,
+      source: function(request, response){
+        var results = $.ui.autocomplete.filter(availableFoods, request.term);
+            if (!results.length) {
+                results = [noResultsTag];
+            }
+            response(results);
+      },
+      select: function (event, ui) {
+            if (ui.item.label === noResultsTag) {
+                event.preventDefault();
+            }
+        },
+        focus: function (event, ui) {
+            if (ui.item.label === noResultsTag) {
+                event.preventDefault();
+            }
+        },
       scroll:true,
       minLength:0,
       messages: {
