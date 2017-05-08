@@ -86,6 +86,7 @@ $(function() {
     var foodName = $('#save-food-name').val();
     var newItem = {name: foodName, gram: "" + recalculate_total(), portion:"1"};
     savedFoods.push(newItem);
+    availableFoods.push(foodName);
   });
   //var availableFoods = ["Rice", "Black Beans", "Chicken", "Tortilla", "Cheese", "Salsa", "Lemonade", "Cookie"];
   var availableFoods = [];
