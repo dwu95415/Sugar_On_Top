@@ -381,6 +381,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   height: 8vh;
   border: none;
   outline: none;
+  font-size: 18px;
 }
 
 #breakfast-tog-button{

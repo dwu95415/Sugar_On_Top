@@ -166,6 +166,7 @@ $(function() {
   $("#addFoodBtn").click(function(){
     query = $("#search").val()
     add(query);
+    $("#search").val("")
   });
 
 
