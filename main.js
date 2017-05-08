@@ -37,6 +37,11 @@ $(function() {
     localStorage.setItem('lunch', JSON.stringify(lunch_data));
     localStorage.setItem('dinner', JSON.stringify(dinner_data));
 
+    savedList = localStorage.getItem("savedList");
+    if(savedList)
+    {
+        $('.well').html(savedList);
+    }
   // A short jQuery extension to read query parameters from the URL.
   $.extend({
     getUrlVars: function() {
@@ -242,13 +247,16 @@ $("#calculate").prop('disabled',true);
 
     $('#add-item').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
+      window.localStorage.setItem("savedList",$(".well").html());
       window.location = "saved.html";
+
 
       });
 
    $('#history').click(function(){
       window.localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
       window.location = "history/Chart.html"
+      window.localStorage.setItem("savedList",$(".well").html());
     });
 
 });
