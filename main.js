@@ -143,7 +143,7 @@ $(function() {
           $(".close-list").click(function(){
             $(this).parent().remove();
             var removedName = $(this).next().html();
-            var index = mainFoodList.indexOf(search_term);    // <-- Not supported in <IE9
+            var index = mainFoodList.indexOf(removedName);
             if (index !== -1) {
                 mainFoodList.splice(index, 1);
             }
