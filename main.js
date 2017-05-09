@@ -102,7 +102,7 @@ $(function() {
     savedFoodList = [];
   }
   var mainFoodList = [];
-  
+
 
 
   var add = function(foodName){
@@ -117,7 +117,7 @@ $(function() {
           var gram = savedFoods[i-items.length].gram;
         }
         if(foodName.toLowerCase() == name.toLowerCase()){
-          mainFoodList.push(foodName);
+          mainFoodList.push(name);
           num_ingredients +=1;
           var item =
           '<li class=" list-group-item lf'+i+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
@@ -143,7 +143,7 @@ $(function() {
           $(".close-list").click(function(){
             $(this).parent().remove();
             var removedName = $(this).next().html();
-            var index = mainFoodList.indexOf(search_term);    // <-- Not supported in <IE9
+            var index = mainFoodList.indexOf(removedName);
             if (index !== -1) {
                 mainFoodList.splice(index, 1);
             }
@@ -273,5 +273,15 @@ $("#calculate").prop('disabled',true);
       window.localStorage.setItem("mainFoodList", JSON.stringify(mainFoodList));
       window.location = "history/Chart.html";
     });
-
+$( document ).ready(function() {
+    var total = recalculate_total();
+    if (total == 0){
+        $("#add-to-foods").prop('disabled',true);
+        $("#calculate").prop('disabled',true);
+    } else {
+        $("#add-to-foods").prop('disabled',false);
+        $("#calculate").prop('disabled',false);
+    }
+    console.log(total);
+    });
 });
