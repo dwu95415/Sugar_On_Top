@@ -102,7 +102,7 @@ $(function() {
     savedFoodList = [];
   }
   var mainFoodList = [];
-  
+
 
 
   var add = function(foodName){
@@ -273,5 +273,15 @@ $("#calculate").prop('disabled',true);
       window.localStorage.setItem("mainFoodList", JSON.stringify(mainFoodList));
       window.location = "history/Chart.html";
     });
-
+$( document ).ready(function() {
+    var total = recalculate_total();
+    if (total == 0){
+        $("#add-to-foods").prop('disabled',true);
+        $("#calculate").prop('disabled',true);
+    } else {
+        $("#add-to-foods").prop('disabled',false);
+        $("#calculate").prop('disabled',false);
+    }
+    console.log(total);
+    });
 });
