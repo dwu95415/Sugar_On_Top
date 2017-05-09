@@ -282,6 +282,5 @@ $( document ).ready(function() {
         $("#add-to-foods").prop('disabled',false);
         $("#calculate").prop('disabled',false);
     }
-    console.log(total);
     });
 });
