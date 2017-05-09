@@ -117,7 +117,7 @@ $(function() {
           var gram = savedFoods[i-items.length].gram;
         }
         if(foodName.toLowerCase() == name.toLowerCase()){
-          mainFoodList.push(foodName);
+          mainFoodList.push(name);
           num_ingredients +=1;
           var item =
           '<li class=" list-group-item lf'+i+'"><span class=close-list aria-hidden="true">&times;</span><div class="food" id="food'+i+'">'+name +'</div>'+
