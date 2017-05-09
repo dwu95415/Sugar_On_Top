@@ -219,6 +219,7 @@ background-color: 	#f7f7f7;
 }
 
 .well{
+  padding-top: 9px;
   background: white !important;
   /*margin-bottom:10px !important;*/
   height:64vh;
@@ -401,4 +402,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   outline-color: black;
   outline-style: solid;
   outline-width: 1%;
+}
+
+
+#clear_all {
+  position: relative;
+  left: 7vw;
+  margin-bottom: 9px;
+  padding: 0;
+  font-size: 1em;
+  color: #3498db;
+  text-decoration: underline #3498db;
 }
