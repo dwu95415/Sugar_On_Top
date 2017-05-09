@@ -28,7 +28,7 @@ var updateInsulin = function()
     if(bloodSugar >= 150)
       extra = Math.floor((bloodSugar-100)/50);
     out = ratio + extra;
-    text_out = 'Inject '+ out +' unit';
+    text_out = 'Inject <b>'+ out +'</b> unit';
     if(out > 1)
       text_out = text_out + 's';
     $('#insulin').html(text_out);
@@ -36,7 +36,7 @@ var updateInsulin = function()
   else{
 
     // console.log('noooo');
-    $('#insulin').html('Inject 0 units');
+    $('#insulin').html('Inject <b>0</b> units');
   }
   if(($("#icr").is(":focus") || $("#bloodSugar").is(":focus"))
       && (icr == 0 || bloodSugar == 0))
@@ -250,5 +250,5 @@ var add = function(){
   g_loc = total_text.indexOf('g');
   col_loc = total_text.indexOf(' ');
   totalVal = parseInt(total_text.substring(col_loc,g_loc));
-  $('#carb-intake').html(totalVal + 'g of Carbs');
+  $('#carb-intake').html(''+totalVal + 'g of Carbs');
 }
