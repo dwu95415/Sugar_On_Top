@@ -199,6 +199,7 @@ var updateData = function(out){
 
   var data;
   var date = new Date();
+  var day = date.getDay();
   var hour = date.getHours();
   if (hour > 3 && hour < 11){
       data = breakfast_data;
@@ -209,15 +210,20 @@ var updateData = function(out){
   else
     data = dinner_data
 
-  if (data.length == 7 && date.getDay() != JSON.parse(localStorage.getItem('day'))){
+
+  if (data.length == 7 && day != JSON.parse(localStorage.getItem('day'))){
     popData(dinner_data);
     popData(breakfast_data);
     popData(lunch_data);
     localStorage.setItem('day',JSON.stringify(date.getDay()));
   }
 
-
-  data.push([data.length + 1,out]);
+  if (data.length == 7){
+    data.pop();
+    data.push([7, bloodSugar]);
+  }
+  else
+    data.push([data.length + 1,bloodSugar]);
 
   localStorage.setItem('breakfast', JSON.stringify(breakfast_data));
   localStorage.setItem('lunch', JSON.stringify(lunch_data));
