@@ -32,7 +32,7 @@ var options = {
                     lineWidth: 10
                 },
                 points: {
-                    radius: 7,
+                    radius: 9,
                     fill: true,
                     show: true
                 }
@@ -95,13 +95,13 @@ $(document).on('click','.toggle-button',function(){
 
     if (item) {
         if (item.dataIndex < 2) { // if first or second point
-            
+
             // add extra data to item
             item.alternateText = (item.dataIndex == 0) ?'hello':'bye';
-            
+
             //cache clicked point's item object in array at correct index
             clickedItems[ item.dataIndex ] = item;
-            
+
             //remove the current tooltip
             $("#tooltip").remove();
             //display new tooltip with the alternate text
@@ -160,7 +160,7 @@ $(document).on('click','.toggle-button',function(){
             y = item.datapoint[1].toFixed(2),
             //set default content for tooltip
             content = "Date: " + getDate(-x) + "\n" + "Blood Sugar: " +  y;
-        
+
         // if there is a cached item object at this index use it instead
         if(clickedItems[item.dataIndex])
             content = clickedItems[item.dataIndex].alternateText;
@@ -192,15 +192,12 @@ var getDate = function(index){
 
     if(dd<10) {
         dd='0'+dd
-    } 
+    }
 
     if(mm<10) {
         mm='0'+mm
-    }    
+    }
 
-        today = mm+'/'+dd 
+        today = mm+'/'+dd
     return today;
 };
-
-    
-
