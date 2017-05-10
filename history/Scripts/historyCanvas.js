@@ -32,7 +32,7 @@ var options = {
                     lineWidth: 10
                 },
                 points: {
-                    radius: 10,
+                    radius: 7,
                     fill: true,
                     show: true
                 }
@@ -159,7 +159,7 @@ $(document).on('click','.toggle-button',function(){
         var x = item.datapoint[0].toFixed(2),
             y = item.datapoint[1].toFixed(2),
             //set default content for tooltip
-            content = "Date: " + getDate(-x) + "\n" + "Units: " +  y;
+            content = "Date: " + getDate(-x) + "\n" + "Blood Sugar: " +  y;
         
         // if there is a cached item object at this index use it instead
         if(clickedItems[item.dataIndex])
